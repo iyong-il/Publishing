@@ -10,9 +10,17 @@ css는 박스의 크기, 위치, 속성(색, 배경, 테두리 모양 등)을 �
 - 경계선(테두리)(margin)
 - 바깥쪽여백(border-width)
 
-#### margin && padding
+### margin && padding
 
 속성 1개 - 모든 방향
 속성 2개 - 1.상하 2.좌우
 속성 3개 - 1.위 2.좌우 3.하
 속성 4개 - 1.상 2.우 3.하 4.좌
+
+### box-sizing
+
+box-sizing 속성은 요소의 너비(width)와 높이(height)를 계산하는 방법을 지정한다.
+
+<div>content-box : 기본값. 너비와 높이가 콘텐츠 영역만을 포함한다.</div>
+<div>border-box : 너비와 높이가 안쪽 여백과 테두리까지 포함한다.</div>
+-> 너비와 높이가 같더라도, box-sizing 속성값에 따라 크기가 달라질 수 있다!

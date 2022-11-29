@@ -1,0 +1,16 @@
+.text {
+  color: red;
+}
+
+#text {
+  color: aqua;
+}
+
+#text2 {
+  color: green;
+}
+
+h1,
+p {
+  font-size: 44px;
+}
