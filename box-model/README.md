@@ -24,3 +24,11 @@ box-sizing 속성은 요소의 너비(width)와 높이(height)를 계산하는 �
 <div>content-box : 기본값. 너비와 높이가 콘텐츠 영역만을 포함한다.</div>
 <div>border-box : 너비와 높이가 안쪽 여백과 테두리까지 포함한다.</div>
 -> 너비와 높이가 같더라도, box-sizing 속성값에 따라 크기가 달라질 수 있다!
+
+### background
+
+background-color : 배경색
+background-image : 배경 이미지
+background-position : 배경이미지 초기위치
+background-size : 배경이미지 크기
+background-repeat : 베경이미지 반복방법
