@@ -41,7 +41,7 @@
   height: 500px;
   border: 1px solid gray;
   background-color: aqua;
-  background-image: url(../images/images.jpeg);
+  background-image: url(./images/images.jpeg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
