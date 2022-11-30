@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+<title>Reset CSS</title>
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic">
+<style>
+* {
+	margin: 0;
+	padding: 0;
+	vertical-align: top;
+	border: 0;
+	outline: 0;
+}
+body {
+	margin: 20px;
+	padding: 20px;
+	line-height: 1.5;
+	font-family: "Open Sans", sans-serif;
+	font-size: 0.9em;
+}
+.title {
+	margin: 0;
+	margin-top: -4px;
+	margin-bottom: 35px;
+	padding: 0;
+	font-size: 1.5em;
+	font-weight: 300;
+}
+article, aside, details, figcaption, figire, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+ul, ol, dl {
+	list-style: none;
+}
+img, video {
+	max-width: 100%;
+}
+a {
+	text-decoration: none;
+	color: #000;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+input, select {
+	vertical-align: middle;
+}
+div.section {
+	padding: 20px 0;
+	border-bottom: 1px solid #ddd;
+}
+div.img_container {
+	width: 100%;
+}
+table.table {
+	width: 400px;
+	border: 1px solid #ddd;
+}
+table.table td {
+	width: 200px;
+	height: 100px;
+	vertical-align: middle;
+	text-align: center;
+	border: 1px solid #ddd;
+}
+form.form1 div {
+	margin: 10px 0;
+	height: 30px;
+	line-height: 30px;
+}
+form.form1 div input[type=text] {
+	padding: 6px;
+	width: 100px;
+	border: 1px solid #ddd;
+}
+form.form2 div {
+	height: 24px;
+	line-height: 24px;
+}
+form.form2 div label {
+	display: inline-block;
+	width: 80px;
+	cursor: pointer;
+}
+form.form2 div input[type=radio] {
+	padding: 6px;
+}
+</style>
+</head>
+
+<body>
+<h1 class="title">basic :: Reset CSS</h1>
+<div class="section">
+	<article>article</article>
+</div>
+<div class="section">
+	<ul>
+		<li>list1</li>
+		<li>list2</li>
+		<li>list3</li>
+		<li>list4</li>
+	</ul>
+</div>
+<div class="section">
+	<div class="img_container">
+		<img src="images/galaxy_note_edge.jpg" alt="Galaxy Note Edge">
+	</div>
+</div>
+<div class="section">
+	<a href="#none" title="link">link text</a>
+</div>
+<div class="section">
+	<table class="table">
+		<tr>
+			<td>cell1</td>
+			<td>cell2</td>
+		</tr>
+	</table>
+</div>
+<div class="section">
+	<form action="" class="form1">
+		<div>First name : <input type="text" name="fname"></div>
+		<div>Last name : <input type="text" name="lname"></div>
+	</form>
+	<form action="" class="form2">
+		<div>
+			<label for="male">Male : </label>
+			<input type="radio" name="sex" id="male" value="male">
+		</div>
+		<div>
+			<label for="female">Female : </label>
+			<input type="radio" name="sex" id="female" value="female">
+		</div>
+	</form>
+</div>
+</body>
+</html>

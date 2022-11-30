@@ -1,0 +1,22 @@
+﻿@charset "UTF-8";
+
+body {
+	margin: 20px;
+	padding: 20px;
+	line-height: 1;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1em;
+	background: #f1f1f1;
+}
+.container {
+	margin: 0;
+	padding: 0;
+	min-width: 500px;
+}
+.title {
+	margin: 0;
+	padding: 0;
+	font-size: 1.5em;
+	font-weight: 300;
+	color: #555;
+}

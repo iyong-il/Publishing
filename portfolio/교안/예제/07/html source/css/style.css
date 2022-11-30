@@ -1,0 +1,83 @@
+﻿@charset "UTF-8";
+
+body {
+	margin: 20px;
+	padding: 20px;
+	line-height: 1;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1em;
+	background: #f1f1f1;
+}
+.title {
+	margin: 0;
+	padding: 0;
+	font-size: 1.5em;
+	font-weight: 300;
+	color: #555;
+}
+.navi {
+	margin: 0;
+	margin-top: 35px;
+	padding: 0;
+	height: 40px;
+	list-style-type: none;
+	font-size: 0.9em;
+}
+.navi > li {
+	float: left;
+	position: relative;
+	line-height: 40px;
+	background: #8ac007;
+}
+.navi > li > a {
+	display: block;
+	padding: 5px 60px;
+	text-decoration: none;
+	color: #fff;
+}
+.navi > li > a:hover {
+	text-decoration: underline;
+}
+.navi li ul {
+	position: absolute;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	background: #fff;
+	opacity: 0;
+	-webkit-box-shadow: 0 12px 25px 0 rgba(0,0,0,.2);
+	box-shadow: 0 12px 25px 0 rgba(0,0,0,.2);
+}
+.navi li:hover ul {
+	opacity: 1;
+}
+.navi li ul li {
+	padding: 0;
+	width: 170px;
+	height: 0;
+	line-height: 0;
+	border-bottom: none;
+	opacity: 0;
+	-webkit-transition: all 0.2s;
+	transition: all 0.2s;
+}
+.navi li:hover ul li {
+	padding: 10px 0;
+	height: 30px;
+	line-height: 20px;
+	border-bottom: 1px dotted #ccc;
+	opacity: 1;
+}
+.navi li ul li:last-child {
+	border-bottom: none;
+}
+.navi li ul li a {
+	display: block;
+	padding: 5px 30px;
+	text-decoration: none;
+	color: #333;
+}
+.navi li ul li:hover a {
+	text-decoration: underline;
+}

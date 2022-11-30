@@ -1,0 +1,117 @@
+@charset "UTF-8";
+
+body {
+	margin: 20px;
+	padding: 20px;
+	font-family: Dotum, AppleGothic, sans-serif;
+	font-size: 1em;
+	background: #f1f1f1;
+	color: #555;
+}
+legend, caption, figcaption, hr {
+	display: none;
+}
+a {
+	text-decoration: none;
+	color: #555;
+}
+a:link, a:hover, a:active, a:focus {
+	text-decoration: none;
+}
+.container {
+	background: #f1f1f1;
+}
+.title {
+	font-family: "Open Sans", sans-serif;
+	font-size: 1.5em;
+	font-weight: 300;
+	color: #555;
+}
+.tab_type {
+	margin-top: 35px;
+	overflow: hidden;
+	font-size: 0.75em;
+	background: url("../images/bg_tab_type_off.gif") repeat-x 0 bottom;
+}
+.tab_type li {
+	float: left;
+	margin-right: -1px;
+	padding-bottom: 9px;
+	height: 30px;
+	min-width: 132px;
+	overflow: hidden;
+}
+.tab_type li a {
+	display: block;
+	line-height: 30px;
+	text-align: center;
+	font-weight: bold;
+	border: 1px solid #c7c7c7;
+	border-bottom: none;
+}
+.tab_type li.on {
+	position: relative;
+	background: #fff url("../images/bg_tab_type_on.gif") no-repeat 50% bottom;
+}
+.tab_type li.on a {
+	color: #f87511;
+	border: 2px solid #f87511;
+	border-bottom: none;
+}
+.data_tbl {
+	margin-top: 15px;
+	font-size: 0.75em; /* 12px */
+}
+.data_tbl table {
+	width: 100%;
+	border-top: 2px solid #8d8d8d;
+}
+.data_tbl table th {
+	padding: 10px 8px;
+	color: #666;
+	border-bottom: 1px solid #8d8d8d;
+}
+.data_tbl table td {
+	padding: 11px 8px;
+	line-height: 18px;
+	text-align: center;
+	color: #666;
+	border-bottom: 1px solid #dbdbdb;
+}
+.data_tbl table td.text_r {
+	text-align: right;
+}
+.data_tbl table td.title,
+.data_tbl table td.title a {
+	vertical-align: middle; /* display: table-cell; */
+	text-align: left;
+	font-family: Dotum, AppleGothic, sans-serif;
+	font-size: 1em; /* 12px */
+	color: #333;
+}
+.data_tbl table td.title a:hover {
+	text-decoration: underline;
+}
+.paging {
+	margin: 0 auto;
+	margin-top: 24px;
+	width: 400px;
+	overflow: hidden;
+	font-size: 0.75em; /* 12px */
+}
+.paging a {
+	float: left;
+}
+.paging .list a {
+	width: 33px;
+	height: 35px;
+	line-height: 35px;
+	text-align: center;
+	font-weight: bold;
+	background: url("../images/btn_paging_off.gif") no-repeat 0 0;
+	color: #545454;
+}
+.paging .list a.on {
+	background: url("../images/btn_paging_on.gif") no-repeat 0 0;
+	color: #884d2b;
+}

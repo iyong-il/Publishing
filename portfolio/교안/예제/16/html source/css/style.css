@@ -1,0 +1,114 @@
+@charset "UTF-8";
+
+html {
+	height: 100%;
+}
+body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1em;
+}
+
+/* http://stackoverflow.com/questions/2610497/change-an-inputs-html5-placeholder-color-with-css */
+::-webkit-input-placeholder { /* WebKit browsers */
+	color: #ccc;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	color: #ccc;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+	color: #ccc;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+	color #ccc;
+}
+
+/* search */
+.search {
+	padding: 80px 0;
+	text-align: center;
+	background: #f1f1f1;
+}
+.search .title {
+	margin: 0 0 25px;
+	font-size: 1.25em;
+	color: #555;
+}
+.search .form {
+	display: inline-block;
+	margin: 0 0 25px;
+}
+.search .form .email {
+	float: left;
+	margin: 0 0 0 10px;
+	padding: 15px;
+	width: 400px;
+	height: 52px;
+	line-height: 22px;
+	font-size: 1.125em;
+	background: #fff;
+	color: #333;
+	border: 1px solid #fff;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+}
+.search .form .email:hover {
+	border: 1px solid #666;
+	-webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+	box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+}
+.search .form .search_button {
+	display: block;
+	float: left;
+	margin: 0 10px;
+	width: 80px;
+	height: 52px;
+	text-align: center;
+	text-decoration: none;
+	font: normal normal normal 1.5em/1 FontAwesome;
+	background: #666;
+	color: #fff;
+	border: 1px solid #666;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
+	-webkit-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+}
+.search .form .search_button:hover {
+	background: #fff;
+	color: #666;
+}
+.search .form .search_button:after {
+	content: "\f00e";
+	display: inline-block;
+	padding-top: 12px;
+}
+
+/* responsive CSS */
+@media (max-width: 767px) {
+	.search .form .email {
+		width: 200px;
+	}
+}
+@media (max-width: 479px) {
+	body {
+		word-wrap: break-word;
+	}
+	.search .form .email {
+		margin-bottom: 10px;
+		width: 100%;
+		text-align: center;
+	}
+	.search .form .search_button {
+		width: 100%;
+	}
+}

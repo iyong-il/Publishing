@@ -1,0 +1,8 @@
+@charset "UTF-8";
+
+body {
+	overflow-x: auto;
+}
+.main {
+	min-width: 900px;
+}

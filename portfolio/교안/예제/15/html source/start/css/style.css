@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+html {
+	height: 100%;
+}
+body {
+	height: 100%;
+	overflow-x: hidden;
+	line-height: 26px;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1em;
+	color: #555;
+}
+a {
+	text-decoration: none;
+	color: #26a6d1;
+	-webkit-transition: color .15s linear;
+	-moz-transition: color .15s linear;
+	-o-transition: color .15s linear;
+	transition: color .15s linear;
+}
+a:hover {
+	color: #1e85a7;
+}

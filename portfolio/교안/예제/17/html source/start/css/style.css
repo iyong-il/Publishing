@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+body {
+	margin: 20px;
+	padding: 20px;
+	font-family: Dotum, AppleGothic, sans-serif;
+	font-size: 1em;
+	background: #f1f1f1;
+	color: #555;
+}
+legend, caption, figcaption, hr {
+	display: none;
+}
+a {
+	text-decoration: none;
+	color: #555;
+}
+a:link, a:hover, a:active, a:focus {
+	text-decoration: none;
+}
+.container {
+	background: #f1f1f1;
+}
+.title {
+	font-family: "Open Sans", sans-serif;
+	font-size: 1.5em;
+	font-weight: 300;
+	color: #555;
+}

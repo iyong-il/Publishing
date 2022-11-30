@@ -1,0 +1,49 @@
+.relative {
+  width: 100px;
+  height: 100px;
+  background: green;
+  position: relative;
+  top: 100px;
+  left: 50px;
+}
+
+.absolute1 {
+  width: 200px;
+  height: 200px;
+  background: yellow;
+  position: relative;
+  border: 1px solid black;
+}
+
+.absolute2 {
+  width: 200px;
+  height: 200px;
+  background: yellow;
+  position: relative;
+  border: 1px solid black;
+}
+
+.abs {
+  width: 100px;
+  height: 100px;
+  background: red;
+  position: absolute;
+  top: 120px;
+}
+
+.fixed {
+  width: 100px;
+  height: 100px;
+  position: fixed;
+  top: 100px;
+  right: 200px;
+  background: blue;
+}
+
+.sticky {
+  width: 100px;
+  height: 100px;
+  position: sticky;
+  top: 0px;
+  background: pink;
+}

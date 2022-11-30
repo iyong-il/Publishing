@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+<title>basic :: CSS3 Transitions</title>
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic">
+<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/nanumgothic.css">
+<style>
+body {
+	margin: 20px;
+	padding: 20px;
+	line-height: 1;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1em;
+	background: #555;
+	color: #000;
+}
+ul, li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+li {
+	margin-top: 60px;
+}
+li:first-child {
+	margin-top: 0;
+}
+.title {
+	margin: 0;
+	padding: 0;
+	font-size: 1.5em;
+	font-weight: 300;
+}
+.example {
+	margin-top: 35px;
+}
+.example div {
+	padding: 20px;
+	width: 200px;
+	height: 50px;
+	line-height: 24px;
+	font-family: "Nanum Gothic", sans-serif;
+	background: #8ac007;
+	color: #fff;
+}
+
+/* transitions */
+.example .transition1 {
+	cursor: pointer;
+	-webkit-transition: width 2s;
+	transition: width 2s;
+}
+.example .transition1:hover {
+	width: 300px;
+}
+.example .transition2 {
+	cursor: pointer;
+	-webkit-transition: width 2s, height 4s;
+	transition: width 2s, height 4s;
+}
+.example .transition2:hover {
+	width: 300px;
+	height: 200px;
+}
+
+/* speed curve */
+.example .speed_curve {
+	font-family: "Open Sans", sans-serif;
+	cursor: pointer;
+	-webkit-transition: width 2s;
+	transition: width 2s;
+}
+.example .linear {
+	-webkit-transition-timing-function: linear;
+	transition-timing-function: linear;
+}
+.example .ease {
+	-webkit-transition-timing-function: ease;
+	transition-timing-function: ease;
+}
+.example .ease_in {
+	-webkit-transition-timing-function: ease-in;
+	transition-timing-function: ease-in;
+}
+.example .ease_out {
+	-webkit-transition-timing-function: ease-out;
+	transition-timing-function: ease-out;
+}
+.example .ease_in_out {
+	-webkit-transition-timing-function: ease-in-out;
+	transition-timing-function: ease-in-out;
+}
+.example .speed_curve:hover {
+	width: 300px;
+}
+
+/* delay */
+.example .delay {
+	-webkit-transition: width 3s;
+	-webkit-transition-delay: 1s;
+	transition: width 3s;
+	transition-delay: 1s;
+}
+.example .delay:hover {
+	width: 300px;
+}
+.example .transform_transition {
+	-webkit-transition: -webkit-transform 2s;
+	transition: transform 2s;
+}
+.example .transform_transition:hover {
+	-webkit-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+</style>
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
+
+<body>
+<div class="container">
+	<h1 class="title">basic :: CSS3 Transitions</h1>
+	<ul class="example">
+		<li><div class="transition1">마우스를 올리면 가로 크기가 변경됩니다.</div></li>
+		<li><div class="transition2">마우스를 올리면 가로, 세로 크기가 변경됩니다.</div></li>
+		<li><div class="linear speed_curve">transition-timing-function: linear;</div></li>
+		<li><div class="ease speed_curve">transition-timing-function: ease;</div></li>
+		<li><div class="ease_in speed_curve">transition-timing-function: ease_in;</div></li>
+		<li><div class="ease_out speed_curve">transition-timing-function: ease_out;</div></li>
+		<li><div class="ease_in_out speed_curve">transition-timing-function: ease_in_out;</div></li>
+		<li><div class="delay">transition-delay: 1s;</div></li>
+		<li><div class="transform_transition">transition: transform 2s;</div></li>
+	</ul>
+</div>
+</body>
+</html>

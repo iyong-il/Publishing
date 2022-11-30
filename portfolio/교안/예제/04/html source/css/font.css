@@ -1,0 +1,11 @@
+@charset "utf-8";
+@font-face {
+	font-family: "Neou-Thin";
+	src: url(../font/Neou-Thin.eot);
+	src: url(../font/Neou-Thin.woff);
+	src: url(../font/Neou-Thin.eot) format(eot),
+		url(../font/Neou-Thin.woff) format(woff),
+		url(../font/Neou-Thin.ttf) format(truetype);
+	font-style: normal;
+	font-weight: normal;
+}
