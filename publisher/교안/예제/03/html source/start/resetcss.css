@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+  border: 0;
+  outline: 0;
+}
+
+body {
+  margin: 20px;
+  line-height: 1.5;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.9em;
+}
+/* html5를 인식못하는 브라우저를 위해 설정 */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+ul,
+ol,
+dl {
+  list-style: none;
+}
+
+img,
+video {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+table {
+  border-collapse: collapse;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+
+div.section {
+  padding: 20px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+table.table {
+  width: 400px;
+  border: 1px solid #ddd;
+}
+
+table.table td {
+  width: 200px;
+  height: 100px;
+  vertical-align: middle;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+form.form1 div {
+  margin: 10px 0;
+  height: 30px;
+  line-height: 30px;
+}
+
+form.form1 div input[type="text"] {
+  padding: 6px;
+  width: 100px;
+  border: 1px solid #ddd;
+}
+
+form.form2 div {
+  height: 24px;
+  line-height: 24px;
+}
+
+form.form2 div label {
+  display: inline-block;
+  width: 80px;
+  cursor: pointer;
+}
+
+form.form2 div label[type="radio"] {
+  padding: 6px;
+}
