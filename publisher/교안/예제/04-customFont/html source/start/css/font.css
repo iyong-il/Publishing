@@ -7,3 +7,38 @@
   font-style: normal;
   font-weight: normal;
 }
+
+/* 0402.html */
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.container .title {
+  margin: 0;
+  padding: 0;
+  font-size: 1.5em;
+  font-weight: 300;
+}
+
+.container .example {
+  margin-top: 35px;
+}
+
+/* .container .example li {
+  margin-top: 60px;
+} */
+
+.container .example li span {
+  line-height: 36px;
+}
+/* .container .example li:first-child {
+  margin-top: 0;
+} */
+
+.container .example li .fonts1 {
+  font-size: 2.5em;
+  color: #fff;
+}
