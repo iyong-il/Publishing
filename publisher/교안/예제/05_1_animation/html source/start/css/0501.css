@@ -1,3 +1,76 @@
-body:hover {
-  background: #fff;
+.example {
+  margin-top: 35px;
+}
+
+.example div {
+  padding: 20px;
+  font-family: "Nanum Gothic", sans-serif;
+  background: #8ac007;
+  color: #fff;
+  cursor: pointer;
+}
+
+.example li .animation1:hover {
+  background: #333;
+  -webkit-animation-name: colorChange1;
+  -webkit-animation-duration: 1s;
+  animation-name: colorChange1;
+  animation-duration: 1s;
+}
+
+.example li .animation2:hover {
+  background: #333;
+  -webkit-animation-name: colorChange2;
+  -webkit-animation-duration: 4s;
+  animation-name: colorChange2;
+  animation-duration: 4s;
+}
+
+/* 크롬, 사파리, 오페라 */
+@-webkit-keyframes colorChange1 {
+  from {
+    background: #8ac007;
+  }
+  to {
+    background: #333;
+  }
+}
+
+@-webkit-keyframes colorChange2 {
+  0% {
+    background: #8ac007;
+  }
+  25% {
+    background: #07bec0;
+  }
+  50% {
+    background: #c07d07;
+  }
+  100% {
+    background: #333;
+  }
+}
+
+@keyframes colorChange1 {
+  from {
+    background: #8ac007;
+  }
+  to {
+    background: #333;
+  }
+}
+
+@keyframes colorChange2 {
+  0% {
+    background: #8ac007;
+  }
+  25% {
+    background: #07bec0;
+  }
+  50% {
+    background: #c07d07;
+  }
+  100% {
+    background: #333;
+  }
 }
