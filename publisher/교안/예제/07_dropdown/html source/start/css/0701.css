@@ -1,0 +1,32 @@
+.container div {
+  margin: 30px 0;
+  padding: 10px;
+  width: 200px;
+  line-height: 24px;
+  border: 1px solid #8ac007;
+  font-weight: 300;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.container #box1 {
+  margin-top: 35px;
+}
+
+.container #box1:hover {
+  background: #8ac007;
+  color: #fff;
+}
+
+.container #box2:hover {
+  margin-left: 50px;
+}
+
+.container #box3:hover {
+  border-width: 10px;
+}
+
+.container #box4:hover {
+  height: 200px;
+}

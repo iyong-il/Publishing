@@ -1,0 +1,89 @@
+.example {
+  margin-top: 35px;
+}
+
+.example div {
+  padding: 20px;
+  width: 200px;
+  height: 50px;
+  line-height: 24px;
+  background: #8ac007;
+  color: #fff;
+  cursor: pointer;
+}
+
+.example .transition1 {
+  -webkit-transition: width 2s;
+  transition: width 2s;
+}
+
+.example .transition1:hover {
+  width: 300px;
+}
+
+.example .transition2 {
+  -webkit-transition: width 2s, height 4s;
+  transition: width 2s, height 4s;
+}
+.example .transition2:hover {
+  width: 300px;
+  height: 200px;
+}
+
+.example .speed_curve {
+  font-family: "Open Sans", sans-serif;
+  -webkit-transition: width 2s;
+  transition: width 2s;
+}
+
+.example .speed_curve:hover {
+  width: 300px;
+}
+
+.example .linear {
+  -webkit-transition-timing-function: linear;
+  transition-timing-function: linear;
+}
+
+.example .ease {
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+}
+
+.example .ease_in {
+  -webkit-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
+}
+
+.example .ease_out {
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.example .ease_in_out {
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+
+.example .delay {
+  /* -webkit-transition: width 3s;
+  -webkit-transition-delay: 1s;
+  transition: width 3s;
+  transition-delay: 1s; */
+  -webkit-transition: width 3s linear 1s;
+  transition: width 3s linear 1s;
+}
+
+.example .delay:hover {
+  width: 300px;
+}
+
+.example .transform_transition {
+  -webkit-transition: -webkit-transform 2s;
+  transition: transform 2s;
+}
+
+.example .transform_transition:hover {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}

@@ -1,0 +1,26 @@
+.example {
+  margin-top: 15px;
+}
+
+.example div {
+  padding: 20px;
+  width: 200px;
+  line-height: 24px;
+  background: #8ac007;
+  color: #fff;
+}
+
+.example .rotatex {
+  -webkit-transform: rotateX(150deg);
+  transform: rotateX(150deg);
+}
+
+.example .rotatey {
+  -webkit-transform: rotateY(150deg);
+  transform: rotateY(150deg);
+}
+
+.example .rotatez {
+  -webkit-transform: rotateZ(10deg);
+  transform: rotateZ(10deg);
+}
