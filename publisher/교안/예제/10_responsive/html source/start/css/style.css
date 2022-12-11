@@ -1,22 +1,22 @@
 ﻿@charset "UTF-8";
 
 body {
-	margin: 20px;
-	padding: 20px;
-	font-family: "Open Sans", sans-serif;
-	font-size: 1em;
-	background: #f1f1f1;
-	color: #555;
+  margin: 20px;
+  padding: 20px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1em;
+  background: #f1f1f1;
+  color: #555;
 }
 .container {
-	min-width: 320px;
+  min-width: 320px;
 }
 .title {
-	font-size: 1.5em;
-	font-weight: 300;
-	color: #555;
+  font-size: 1.5em;
+  font-weight: 300;
+  color: #555;
 }
-nav {
+/* nav {
 	margin-top: 35px;
 }
 nav span {
@@ -122,7 +122,7 @@ nav ul.subs > li li:hover {
 	padding-left: 8px;
 }
 
-/* responsive CSS */
+
 @media all and (max-width: 980px) {
 	nav > ul > li {
 		float: none;
@@ -145,4 +145,4 @@ nav ul.subs > li li:hover {
 		width: auto;
 		border-left: none;
 	}
-}
+} */
