@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+}
+
+#navbar {
+  padding: 0 20px;
+  border-bottom: 1px solid #eee;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,0.50);
+  height: 60px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+#logo {
+  float: left;
+
+  /* 이건 지우세요 */
+  /* background-color: orange; */
+}
+
+#menu {
+  float: right;
+  display: flex;
+  list-style: none;
+}
+
+#menu li a{
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#menu li a:hover {
+  background-color: #eeeeee;
+}
+
+.hero-header {
+  background-image: url("../images/hero_image\ \(1\).jpeg");
+  background-size: cover;
+  background-position: center center;
+  height: 670px;
+  text-align: center;
+  font-family: 'Noto Sans KR', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-header .info h1 {
+  font-size: 36px;
+  margin: 0;
+  margin-bottom: 13px;
+  color: white;
+  font-weight: 400;
+}
+
+.hero-header .info h2 {
+  font-size: 16px;
+  margin: 0;
+  margin-bottom: 60px;
+  color: white;
+  font-weight: 400;
+}
+
+.hero-header .info a {
+  font-size: 14px;
+  background-color: white;
+  color: #464273;
+  padding: 10px 40px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+

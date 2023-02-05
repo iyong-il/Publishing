@@ -1,0 +1,39 @@
+body  {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+}
+
+.menu {
+    font-size: 16px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+a {
+    text-decoration: none;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-family: Helvetica, sans-serif;
+    color: #58595B;
+}
+
+.now {
+    font-weight: 700;
+}
+
+.picture {
+    width: 90%;
+    display: block;
+    margin-left:auto;
+    margin-right: auto;
+}
