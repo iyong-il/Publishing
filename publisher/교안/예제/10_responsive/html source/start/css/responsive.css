@@ -1,0 +1,29 @@
+@media all and (max-width: 980px) {
+  nav > ul > li {
+    float: none;
+    text-align: center;
+    margin-bottom: 0;
+    border-bottom: 0;
+  }
+
+  nav ul.subs {
+    position: relative;
+    top: 0;
+  }
+
+  nav li:hover ul.subs {
+    display: none;
+  }
+
+  nav li #s1:target + ul.subs,
+  nav li #s2:target + ul.subs {
+    display: block;
+    text-align: left;
+  }
+
+  nav ul.subs > li {
+    display: block;
+    width: auto;
+    border-left: none;
+  }
+}
