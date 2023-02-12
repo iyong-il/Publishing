@@ -1,0 +1,21 @@
+/* 가로 */
+@media screen and (orientation: landscape) {
+  body {
+    background: #8ac007;
+  }
+
+  h2#landscape {
+    display: block;
+  }
+}
+
+/* 세로 */
+@media screen and (orientation: portrait) {
+  body {
+    background: #24bbaf;
+  }
+
+  h2#portrait {
+    display: block;
+  }
+}

@@ -1,0 +1,13 @@
+/* 가로 */
+@media screen and (max-width: 800px) {
+  #wrapper:after {
+    content: "max-width: 800px";
+  }
+}
+
+/* 세로 */
+@media screen and (max-width: 400px) {
+  #wrapper:after {
+    content: "max-width: 400px";
+  }
+}
