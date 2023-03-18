@@ -23,3 +23,7 @@
   /* top: 62.5%; */
   /* transform: translate(-50%, -50%); */
 }
+
+.border {
+  border: 3px solid #ff5000;
+}

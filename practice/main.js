@@ -22,3 +22,12 @@ var bar2 = new ProgressBar.SemiCircle(container2, {
 });
 bar.animate(0.9);
 bar2.animate(0.5); // Number from 0.0 to 1.0
+
+function checkInputLength() {
+  var input = document.getElementById("myInput");
+  if (input.value.length >= 13) {
+    input.classList.add("border");
+  } else {
+    input.classList.remove("border");
+  }
+}
