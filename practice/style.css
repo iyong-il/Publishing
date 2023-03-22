@@ -3,7 +3,7 @@
   position: relative;
   margin: 50px auto 50px;
   padding: 4px 0 0;
-  width: 600px;
+  width: 400px;
   height: 6px;
   background: #ddd;
 }
@@ -14,12 +14,12 @@ li {
   left: 0;
   margin: 0;
   padding: 0;
-  display: inline-table;
+  display: inline;
   height: 10px;
   width: 10px;
   background: #fff;
   border-radius: 50%;
-  margin-left: 600px;
+  margin-left: 400px;
 }
 
 li::before {
@@ -36,14 +36,15 @@ li::before {
 li::after {
   z-index: -99;
   position: absolute;
-  top: -35px;
-  left: -5px;
+  top: -20px;
+  left: 5px;
+  transform: translate(-50%, -50%);
   content: "실적";
   width: 34px;
   background: #ddd;
   border-radius: 2px;
   color: #fff;
   font-size: 12px;
-  padding: 1px 0;
+  padding-top: 1px;
   text-align: center;
 }
