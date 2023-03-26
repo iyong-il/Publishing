@@ -22,15 +22,5 @@ chet.stroke();
 chet.beginPath();
 chet.strokeStyle = "#ddd";
 chet.lineWidth = 8;
-chet.arc(170, 200, 140, 0, -0.4 * Math.PI, true);
+chet.arc(170, 200, 140, -0, -0.4 * Math.PI, true);
 chet.stroke();
-
-$("#start").click(function () {
-  $(".progress-bar").animate({
-    width: "+=200px",
-  });
-});
-
-$("#reset").click(function () {
-  $(".progress-bar").css("width", "0");
-});
