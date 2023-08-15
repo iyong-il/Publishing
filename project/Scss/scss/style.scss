@@ -1,0 +1,8 @@
+@import "abstracts/variables"; // 변수
+@import "abstracts/mixin.scss"; // 믹스인
+
+@import "base/reset"; // 리셋, 노멀라이즈 css
+@import "base/typhography"; // 폰트정의
+
+@import "layout/header"; //헤더
+@import "layout/footer"; // 푸터
