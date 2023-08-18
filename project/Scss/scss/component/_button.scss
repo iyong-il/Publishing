@@ -1,0 +1,17 @@
+.btn {
+  &-prev {
+    width: 40px;
+    height: 40px;
+    background: url(/images/btn_prev.svg) no-repeat center;
+  }
+  &-menu {
+    width: 40px;
+    height: 40px;
+    background: url(/images/btn_menu.svg) no-repeat center;
+  }
+  &-cart {
+    width: 40px;
+    height: 40px;
+    background: url(/images/btn_cart.svg) no-repeat center;
+  }
+}
