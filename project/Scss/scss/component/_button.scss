@@ -1,17 +1,30 @@
 .btn {
   &-prev {
-    width: 40px;
-    height: 40px;
-    background: url(/images/btn_prev.svg) no-repeat center;
+    width: rem(40);
+    height: rem(40);
+    background: url(/images/btn_prev.svg) no-repeat center / rem(24) auto;
   }
   &-menu {
-    width: 40px;
-    height: 40px;
-    background: url(/images/btn_menu.svg) no-repeat center;
+    width: rem(40);
+    height: rem(40);
+    background: url(/images/btn_menu.svg) no-repeat center / rem(24) auto;
   }
   &-cart {
-    width: 40px;
-    height: 40px;
-    background: url(/images/btn_cart.svg) no-repeat center;
+    position: relative;
+    width: rem(40);
+    height: rem(40);
+    background: url(/images/btn_cart.svg) no-repeat center / rem(24) auto;
+
+    span {
+      @include position(right, rem(1), top, rem(4));
+      padding: 0 rem(6);
+      height: rem(16);
+      line-height: rem(16);
+      background-color: $red;
+      color: $white;
+      border-radius: rem(16);
+      font-size: rem(11);
+      font-weight: 500;
+    }
   }
 }

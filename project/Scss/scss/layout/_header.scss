@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   position: relative;
-  height: 48px;
+  height: rem(48);
   .h1 {
     @include position(left, 50%);
   }
