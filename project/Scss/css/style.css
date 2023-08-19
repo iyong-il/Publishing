@@ -214,21 +214,53 @@ body {
   justify-content: space-between;
 }
 
+.guide {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 4.8rem;
+  z-index: 100;
+  background-color: #fff;
+  border-top: 1px solid #060606;
+}
+.guide-pad {
+  padding-top: 6.3rem;
+}
+.guide ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.guide li:nth-child(4n) {
+  border-right: none;
+}
+.guide a {
+  display: block;
+  line-height: 3rem;
+  text-align: center;
+  border-bottom: 1px solid #060606;
+  border-right: 1px solid #060606;
+  font-size: 1.6rem;
+  color: #000;
+}
+
 .btn-prev {
+  background: url(/images/btn_prev.svg) no-repeat center;
+  background-size: 2.4rem auto;
   width: 4rem;
   height: 4rem;
-  background: url(/images/btn_prev.svg) no-repeat center/2.4rem auto;
 }
 .btn-menu {
+  background: url(/images/btn_menu.svg) no-repeat center;
+  background-size: 2.4rem auto;
   width: 4rem;
   height: 4rem;
-  background: url(/images/btn_menu.svg) no-repeat center/2.4rem auto;
 }
 .btn-cart {
+  background: url(/images/btn_cart.svg) no-repeat center;
+  background-size: 2.4rem auto;
   position: relative;
   width: 4rem;
   height: 4rem;
-  background: url(/images/btn_cart.svg) no-repeat center/2.4rem auto;
 }
 .btn-cart span {
   position: absolute;
@@ -246,9 +278,6 @@ body {
 
 .gnb {
   box-shadow: 0px -0.4rem 0.4rem rgba(6, 6, 6, 0.04);
-  position: fixed;
-  bottom: 0;
-  width: 100%;
 }
 .gnb ul {
   display: flex;
@@ -266,46 +295,46 @@ body {
   color: rgba(131, 131, 138, 0.5764705882);
 }
 .gnb .ico1 {
-  background: url(../../images/ico_gnb_off1.svg) no-repeat center 0.8rem;
+  background: url(/images/ico_gnb_off1.svg) no-repeat center 0.8rem;
 }
 .gnb .ico1:hover {
-  background: url(../../images/ico_gnb_on1.svg) no-repeat center 0.8rem;
+  background: url(/images/ico_gnb_on1.svg) no-repeat center 0.8rem;
 }
 .gnb .ico1:hover a {
   color: #000;
 }
 .gnb .ico2 {
-  background: url(../../images/ico_gnb_off2.svg) no-repeat center 0.8rem;
+  background: url(/images/ico_gnb_off2.svg) no-repeat center 0.8rem;
 }
 .gnb .ico2:hover {
-  background: url(../../images/ico_gnb_on2.svg) no-repeat center 0.8rem;
+  background: url(/images/ico_gnb_on2.svg) no-repeat center 0.8rem;
 }
 .gnb .ico2:hover a {
   color: #000;
 }
 .gnb .ico3 {
-  background: url(../../images/ico_gnb_off3.svg) no-repeat center 0.8rem;
+  background: url(/images/ico_gnb_off3.svg) no-repeat center 0.8rem;
 }
 .gnb .ico3:hover {
-  background: url(../../images/ico_gnb_on3.svg) no-repeat center 0.8rem;
+  background: url(/images/ico_gnb_on3.svg) no-repeat center 0.8rem;
 }
 .gnb .ico3:hover a {
   color: #000;
 }
 .gnb .ico4 {
-  background: url(../../images/ico_gnb_off4.svg) no-repeat center 0.8rem;
+  background: url(/images/ico_gnb_off4.svg) no-repeat center 0.8rem;
 }
 .gnb .ico4:hover {
-  background: url(../../images/ico_gnb_on4.svg) no-repeat center 0.8rem;
+  background: url(/images/ico_gnb_on4.svg) no-repeat center 0.8rem;
 }
 .gnb .ico4:hover a {
   color: #000;
 }
 .gnb .ico5 {
-  background: url(../../images/ico_gnb_off5.svg) no-repeat center 0.8rem;
+  background: url(/images/ico_gnb_off5.svg) no-repeat center 0.8rem;
 }
 .gnb .ico5:hover {
-  background: url(../../images/ico_gnb_on5.svg) no-repeat center 0.8rem;
+  background: url(/images/ico_gnb_on5.svg) no-repeat center 0.8rem;
 }
 .gnb .ico5:hover a {
   color: #000;

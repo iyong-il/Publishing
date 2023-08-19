@@ -1,19 +1,20 @@
 .btn {
   &-prev {
+    @include bg("btn_prev.svg", center, null, null, rem(24), auto);
     width: rem(40);
     height: rem(40);
-    background: url(/images/btn_prev.svg) no-repeat center / rem(24) auto;
+    // background: url(/images/btn_prev.svg) no-repeat center / rem(24) auto;
   }
   &-menu {
+    @include bg("btn_menu.svg", center, null, null, rem(24), auto);
     width: rem(40);
     height: rem(40);
-    background: url(/images/btn_menu.svg) no-repeat center / rem(24) auto;
   }
   &-cart {
+    @include bg("btn_cart.svg", center, null, null, rem(24), auto);
     position: relative;
     width: rem(40);
     height: rem(40);
-    background: url(/images/btn_cart.svg) no-repeat center / rem(24) auto;
 
     span {
       @include position(right, rem(1), top, rem(4));

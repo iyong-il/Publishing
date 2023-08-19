@@ -1,8 +1,5 @@
 .gnb {
   box-shadow: 0px rem(-4) rem(4) rgba($grey06, 0.04);
-  position: fixed;
-  bottom: 0;
-  width: 100%;
   ul {
     display: flex;
   }
@@ -21,15 +18,13 @@
 
   @for $i from 1 to 6 {
     .ico#{$i} {
-      background: url(../../images/ico_gnb_off#{$i}.svg)
-        no-repeat
-        center
-        rem(8);
+      @include bg("ico_gnb_off" + #{$i} + ".svg", center, rem(8));
       &:hover {
-        background: url(../../images/ico_gnb_on#{$i}.svg)
-          no-repeat
-          center
-          rem(8);
+        // background: url(../../images/ico_gnb_on#{$i}.svg)
+        //   no-repeat
+        //   center
+        //   rem(8);
+        @include bg("ico_gnb_on" + #{$i} + ".svg", center, rem(8));
         a {
           color: $black;
         }
