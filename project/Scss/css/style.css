@@ -242,4 +242,71 @@ body {
   border-radius: 1.6rem;
   font-size: 1.1rem;
   font-weight: 500;
+}
+
+.gnb {
+  box-shadow: 0px -0.4rem 0.4rem rgba(6, 6, 6, 0.04);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.gnb ul {
+  display: flex;
+}
+.gnb li {
+  flex: 1;
+}
+.gnb a {
+  display: block;
+  padding: 3.5rem 0 0.6rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1.6rem;
+  text-align: center;
+  color: rgba(131, 131, 138, 0.5764705882);
+}
+.gnb .ico1 {
+  background: url(../../images/ico_gnb_off1.svg) no-repeat center 0.8rem;
+}
+.gnb .ico1:hover {
+  background: url(../../images/ico_gnb_on1.svg) no-repeat center 0.8rem;
+}
+.gnb .ico1:hover a {
+  color: #000;
+}
+.gnb .ico2 {
+  background: url(../../images/ico_gnb_off2.svg) no-repeat center 0.8rem;
+}
+.gnb .ico2:hover {
+  background: url(../../images/ico_gnb_on2.svg) no-repeat center 0.8rem;
+}
+.gnb .ico2:hover a {
+  color: #000;
+}
+.gnb .ico3 {
+  background: url(../../images/ico_gnb_off3.svg) no-repeat center 0.8rem;
+}
+.gnb .ico3:hover {
+  background: url(../../images/ico_gnb_on3.svg) no-repeat center 0.8rem;
+}
+.gnb .ico3:hover a {
+  color: #000;
+}
+.gnb .ico4 {
+  background: url(../../images/ico_gnb_off4.svg) no-repeat center 0.8rem;
+}
+.gnb .ico4:hover {
+  background: url(../../images/ico_gnb_on4.svg) no-repeat center 0.8rem;
+}
+.gnb .ico4:hover a {
+  color: #000;
+}
+.gnb .ico5 {
+  background: url(../../images/ico_gnb_off5.svg) no-repeat center 0.8rem;
+}
+.gnb .ico5:hover {
+  background: url(../../images/ico_gnb_on5.svg) no-repeat center 0.8rem;
+}
+.gnb .ico5:hover a {
+  color: #000;
 }/*# sourceMappingURL=style.css.map */
