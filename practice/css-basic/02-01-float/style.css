@@ -1,0 +1,13 @@
+.float-box {
+  width: 200px;
+  height: 200px;
+  background-color: lightblue;
+  padding: 30px;
+  box-sizing: border-box;
+  float: left;
+}
+
+p {
+  font-size: 20px;
+  clear: right;
+}
