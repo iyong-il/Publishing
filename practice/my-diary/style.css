@@ -1,9 +1,10 @@
-body {
-  background-color: grey;
-}
-div {
+* {
   box-sizing: border-box;
 }
+body {
+  background-color: lightgrey;
+}
+
 .container {
   background-color: white;
   margin: 50px;
@@ -16,12 +17,11 @@ div {
 }
 
 .wrapper__head {
-  border-bottom: 3px dotted grey;
+  border-bottom: 3px dashed grey;
   padding-bottom: 40px;
 }
 
 .wrapper__head__title {
-  display: block;
   background-color: orange;
   color: white;
   text-align: center;
