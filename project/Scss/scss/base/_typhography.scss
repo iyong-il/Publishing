@@ -21,3 +21,27 @@ body {
   line-height: rem(29);
   color: $black06;
 }
+.h2 {
+  font-weight: 700;
+  font-size: rem(18);
+  line-height: rem(29);
+  color: $grey1e;
+  &-2 {
+    font-weight: 400;
+    font-size: rem(18);
+    line-height: rem(29);
+    color: $grey1e;
+  }
+  &-3 {
+    font-weight: 700;
+    font-size: rem(22);
+    line-height: rem(30);
+    color: $grey1e;
+  }
+}
+.h3 {
+  font-weight: 700;
+  font-size: rem(15);
+  line-height: rem(23);
+  color: $grey1e;
+}
