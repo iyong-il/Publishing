@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+<title>basic :: animate menu</title>
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic">
+<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/nanumgothic.css">
+<style>
+body {
+	margin: 20px;
+	padding: 20px;
+	line-height: 1;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1em;
+	background: #555;
+	color: #000;
+}
+.container {
+	height: 200px; /* 크기를 지정해서 이벤트가 발생되도록 합니다. */
+}
+.container .title {
+	margin: 0 0 35px;
+	padding: 0;
+	font-size: 1.5em;
+	font-weight: 300;
+	color: #000;
+}
+.container .navi .horizontal {
+	float: left;
+	width: 100px;
+	height: 100px;
+	background: #4e4e4e;
+	cursor: pointer;
+}
+.container .navi .horizontal .relative {
+	position: relative;
+}
+.container .navi .horizontal .relative .head {
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0px;
+	padding: 10px;
+	width: 100px;
+	height: 100px;
+	font-size: 0.875em;
+	background: #666;
+	color: #000;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+</style>
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+<script>
+// 4단계 : 초기 메뉴가 활성화되는 메뉴 (#menu0)를 만들어 봅시다.
+$(function(){
+	var string="menu1";
+	var current=string;
+	menuControl();
+
+	$("div.horizontal").hover(
+		function(){
+			string=$(this).attr("id");
+			menuControl();
+		},
+		function(){
+			string=""; 
+			menuControl();
+		}
+	);
+	$(".container").mouseleave(function(){
+		setTimeout(intervalControl, 2000);
+	});
+	function menuControl(){
+		for(var i=0; i<3; i++){
+			var $menu=$("div#menu"+i);
+			if(string == $menu.attr("id")){
+				$menu.stop().animate({width:"200px"}, 300);
+				$menu.find(".head").css({"background-color":"#8ac007"});
+			}else{
+				$menu.stop().animate({width:"100px"}, 300);
+				$menu.find(".head").css({"background-color":"#666"});
+			}
+		}
+	}
+	function intervalControl(){
+		// alert("intervalControl 함수 호출");
+		string=current;
+		menuControl();
+	}
+});
+</script>
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
+
+<body>
+<div class="container">
+	<h1 class="title">basic :: animate menu</h1>
+	<div class="navi">
+		<div id="menu0" class="horizontal">
+			<div class="relative">
+				<span class="head">menu0</span>
+			</div>
+		</div>
+		<div id="menu1" class="horizontal">
+			<div class="relative">
+				<span class="head">menu1</span>
+			</div>
+		</div>
+		<div id="menu2" class="horizontal">
+			<div class="relative">
+				<span class="head">menu2</span>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

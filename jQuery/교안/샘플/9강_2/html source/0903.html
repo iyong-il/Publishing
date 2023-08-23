@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+<title>basic :: animate() method</title>
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic">
+<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/nanumgothic.css">
+<style>
+body {
+	margin: 20px;
+	padding: 20px;
+	line-height: 1;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1em;
+	background: #555;
+	color: #000;
+}
+.container .title {
+	margin: 0 0 35px;
+	padding: 0;
+	font-size: 1.5em;
+	font-weight: 300;
+	color: #000;
+}
+.container .gallery {
+	position: relative;
+	left: 0;
+	top: 0;
+	width: 650px;
+	height: 200px;
+	overflow: hidden;
+}
+.container .gallery .home {
+	position: absolute;
+	z-index: 2;
+	left: 0;
+	top: 0;
+	padding-top: 10px;
+	width: 50px;
+	height: 200px;
+	text-align: center;
+	font-size: 0.75em;
+	background: #5f5f5f;
+	color: #fff;
+	cursor: pointer;
+	box-sizing: border-box;
+}
+.container .gallery .navi {
+	position: absolute;
+	z-index: 1;
+	left: -600px;
+	top: 0;
+	margin: 0;
+	padding: 0;
+	width: 600px;
+	height: 200px;
+	list-style: none;
+}
+.container .gallery .navi li {
+	float: left;
+	width: 200px;
+	height: 200px;
+	opacity: 0.4;
+	-webkit-transition: opacity 400ms; /* -webkit-transition: opacity 0.4s; */
+	transition: opacity 400ms; /* transition: opacity 0.4s; */
+}
+.container .gallery .navi li.on {
+	opacity: 1;
+}
+</style>
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script>
+$(function(){
+	var status="closed";
+
+	$(".home").click(function(){
+		if(status == "closed"){
+			status="open";
+			$(".navi").stop().animate({left:"50px"}, 500);
+		}else if(status == "open"){
+			status="closed";
+			$(".navi").stop().animate({left:"-600px"}, 500);
+		}
+		// console.log("status : "+status);
+	});
+	$(".navi li").hover(
+		function(){
+			// $(this).animate({opacity:1}, 300);
+			$(this).addClass("on");
+		},
+		function(){
+			// $(this).animate({opacity:0.4}, 300);
+			$(this).removeClass("on");
+		}
+	);
+});
+</script>
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
+
+<body>
+<div class="container">
+	<h1 class="title">basic :: animate() method</h1>
+	<div class="gallery">
+		<div class="home">HOME</div>
+		<ul class="navi">
+			<li><img src="images/th_bg1.jpg" alt="thumbnail1"></li>
+			<li><img src="images/th_bg2.jpg" alt="thumbnail2"></li>
+			<li><img src="images/th_bg3.jpg" alt="thumbnail3"></li>
+		</ul>
+	</div>
+</div>
+</body>
+</html>
