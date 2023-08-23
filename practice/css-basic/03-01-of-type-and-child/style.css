@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+}
+
+.container h1:first-child {
+  background-color: red;
+}
+
+.container p:first-of-type {
+  background-color: blue;
+}
+
+.container p:last-of-type {
+  background-color: yellow;
+}
+
+.container p:nth-last-of-type(2) {
+  background-color: green;
+}
+
+.container span:first-of-type {
+  background-color: violet;
+}
+
+/* 적용 되지 않는 css */
+.container span:first-child {
+  background-color: skyblue;
+}
