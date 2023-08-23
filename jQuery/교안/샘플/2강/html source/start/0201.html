@@ -70,13 +70,18 @@
   </body>
   <script src="https://code.jquery.com/jquery-latest.min.js"></script>
   <script>
-    var link_array = new Array(
+    var link_array = [
       "http://www.naver.com",
       "http://www.daum.net",
-      "http://www.google.com"
-    );
+      "http://www.google.com",
+    ];
     $(function () {
-      $("button").click(function () {});
+      $("button").click(function () {
+        // var url = $(this).attr("title");
+        // window.location.href = url;
+        var num = $(this).attr("id").substr(-1, 1);
+        window.location.href = link_array[num];
+      });
     });
   </script>
 </html>

@@ -1,67 +1,91 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-<title>basic :: jQuery Event</title>
-<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic">
-<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/nanumgothic.css">
-<style>
-body {
-	margin: 20px;
-	padding: 20px;
-	line-height: 1;
-	font-family: "Open Sans", sans-serif;
-	font-size: 1em;
-	background: #555;
-	color: #000;
-}
-.container .title {
-	margin: 0 0 35px;
-	padding: 0;
-	font-size: 1.5em;
-	font-weight: 300;
-	color: #000;
-}
-.container button {
-	padding: 5px 15px;
-	background: #eaeaea;
-	color: #666;
-	border: none;
-	cursor: pointer;
-	-webkit-border-radius: 5px;
-	border-radius: 5px;
-	-webkit-transition: all 0.4s;
-	transition: all 0.4s;
-}
-.container button:hover {
-	background: #999;
-	color: #000;
-}
-.container .round {
-	margin-top: 35px;
-	width: 200px;
-	height: 200px;
-	background: #666;
-	-webkit-border-radius: 50%;
-	border-radius: 50%;
-}
-</style>
-<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-<script>
-</script>
-<!--[if lt IE 9]>
-<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
-</head>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
+    />
+    <title>basic :: jQuery Event</title>
+    <link
+      rel="stylesheet"
+      href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic"
+    />
+    <link
+      rel="stylesheet"
+      href="http://fonts.googleapis.com/earlyaccess/nanumgothic.css"
+    />
+    <style>
+      body {
+        margin: 20px;
+        padding: 20px;
+        line-height: 1;
+        font-family: "Open Sans", sans-serif;
+        font-size: 1em;
+        background: #555;
+        color: #000;
+      }
+      .container .title {
+        margin: 0 0 35px;
+        padding: 0;
+        font-size: 1.5em;
+        font-weight: 300;
+        color: #000;
+      }
+      .container button {
+        padding: 5px 15px;
+        background: #eaeaea;
+        color: #666;
+        border: none;
+        cursor: pointer;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+        -webkit-transition: all 0.4s;
+        transition: all 0.4s;
+      }
+      .container button:hover {
+        background: #999;
+        color: #000;
+      }
+      .container .round {
+        margin-top: 35px;
+        width: 200px;
+        height: 200px;
+        background: #666;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+      }
+    </style>
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script></script>
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
 
-<body>
-<div class="container">
-	<h1 class="title">basic :: jQuery Event</h1>
-	<button id="hide">hide</button>
-	<button id="show">show</button>
-	<div class="round"></div>
-</div>
-</body>
+  <body>
+    <div class="container">
+      <h1 class="title">basic :: jQuery Event</h1>
+      <button id="hide">hide</button>
+      <button id="show">show</button>
+      <div class="round"></div>
+    </div>
+  </body>
+  <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+  <script>
+    $(function () {
+      $("#hide").click(function () {
+        $(".round").hide(3000, display_fn);
+      });
+      $("#show").click(function () {
+        $(".round").show(3000, display_fn);
+      });
+      function display_fn() {
+        $(".title").text(
+          "지금 상태는 : " + $(".round").css("display") + "입니다."
+        );
+      }
+    });
+  </script>
 </html>

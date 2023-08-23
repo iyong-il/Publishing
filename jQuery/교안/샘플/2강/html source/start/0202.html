@@ -1,81 +1,108 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-<title>basic :: jQuery Event</title>
-<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic">
-<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/nanumgothic.css">
-<style>
-body {
-	margin: 20px;
-	padding: 20px;
-	line-height: 1;
-	font-family: "Open Sans", sans-serif;
-	font-size: 1em;
-	background: #555;
-	color: #000;
-}
-.container .title {
-	margin: 0 0 35px;
-	padding: 0;
-	font-size: 1.5em;
-	font-weight: 300;
-	color: #000;
-}
-.container button {
-	padding: 5px 15px;
-	background: #eaeaea;
-	color: #666;
-	border: none;
-	cursor: pointer;
-	-webkit-border-radius: 5px;
-	border-radius: 5px;
-	-webkit-transition: all 0.4s;
-	transition: all 0.4s;
-}
-.container button:hover {
-	background: #999;
-	color: #000;
-}
-.container .round_area {
-	position: relative;
-	margin-top: 20px;
-	width: 300px;
-	height: 300px;
-	overflow: hidden;
-	border: 1px solid #444;
-}
-.container .round_area .round {
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 30px;
-	height: 30px;
-	background: #666;
-	-webkit-border-radius: 50%;
-	border-radius: 50%;
-}
-</style>
-<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-<script>
-</script>
-<!--[if lt IE 9]>
-<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
-</head>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
+    />
+    <title>basic :: jQuery Event</title>
+    <link
+      rel="stylesheet"
+      href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic"
+    />
+    <link
+      rel="stylesheet"
+      href="http://fonts.googleapis.com/earlyaccess/nanumgothic.css"
+    />
+    <style>
+      body {
+        margin: 20px;
+        padding: 20px;
+        line-height: 1;
+        font-family: "Open Sans", sans-serif;
+        font-size: 1em;
+        background: #555;
+        color: #000;
+      }
+      .container .title {
+        margin: 0 0 35px;
+        padding: 0;
+        font-size: 1.5em;
+        font-weight: 300;
+        color: #000;
+      }
+      .container button {
+        padding: 5px 15px;
+        background: #eaeaea;
+        color: #666;
+        border: none;
+        cursor: pointer;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+        -webkit-transition: all 0.4s;
+        transition: all 0.4s;
+      }
+      .container button:hover {
+        background: #999;
+        color: #000;
+      }
+      .container .round_area {
+        position: relative;
+        margin-top: 20px;
+        width: 300px;
+        height: 300px;
+        overflow: hidden;
+        border: 1px solid #444;
+      }
+      .container .round_area .round {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 30px;
+        height: 30px;
+        background: #666;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+      }
+    </style>
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script></script>
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
 
-<body>
-<div class="container">
-	<h1 class="title">basic :: jQuery Event</h1>
-	<button id="left">left</button>
-	<button id="right">right</button>
-	<button id="top">top</button>
-	<button id="bottom">bottom</button><br>
-	<div class="round_area">
-		<div class="round"></div>
-	</div>
-</div>
-</body>
+  <body>
+    <div class="container">
+      <h1 class="title">basic :: jQuery Event</h1>
+      <button id="left">left</button>
+      <button id="right">right</button>
+      <button id="top">top</button>
+      <button id="bottom">bottom</button><br />
+      <div class="round_area">
+        <div class="round"></div>
+      </div>
+    </div>
+  </body>
+  <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+  <script>
+    // var x = 0;
+    // var y = 0;
+    $(function () {
+      $("#left").click(function () {
+        $(".round").css({ left: "-=10px" });
+      });
+      $("#right").click(function () {
+        $(".round").css({ left: "+=10px" });
+      });
+      $("#top").click(function () {
+        $(".round").css({ top: "-=10px" });
+      });
+      $("#bottom").click(function () {
+        $(".round").css({ top: "+=10px" });
+      });
+    });
+  </script>
 </html>
