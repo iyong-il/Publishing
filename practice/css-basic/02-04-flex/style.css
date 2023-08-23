@@ -1,0 +1,18 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.flex-container {
+  height: 300px;
+  background-color: lightgray;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-container div {
+  background-color: white;
+  border: 1px solid red;
+}
