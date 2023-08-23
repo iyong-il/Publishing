@@ -7,7 +7,13 @@ $grey06: #060606;
 $grey1e: #1e2530;
 $grey55: #555d57;
 $grey83: #838a93;
+$greyd6: #d6d9e1;
 $greye5: #e5e8f0;
-
+$greyf6: #f6f6f6;
 // 이미지 경로
 $imgurl: "/images/";
+
+// 클래스명, 모서리둥근, 높이, 패딩, 폰트크기, 폰트색상, 선색상, 배경색
+$badgeSetting: "black" 4 3 20 13 $white $grey1e $grey1e,
+  "purple" 4 3 8 13 $white $purple $purple,
+  "grey" 4 3 8 13 $grey1e $greye5 $greye5;

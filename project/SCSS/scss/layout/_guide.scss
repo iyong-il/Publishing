@@ -1,13 +1,13 @@
 .guide {
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: rem(48);
-  z-index: 100;
+  // position: fixed;
+  // left: 0;
+  // right: 0;
+  // top: rem(48);
+  // z-index: 100;
   background-color: $white;
   border-top: 1px solid $grey06;
   &-pad {
-    padding-top: rem(63);
+    // padding-top: rem(63);
   }
   ul {
     display: grid;

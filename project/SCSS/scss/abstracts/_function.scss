@@ -3,3 +3,7 @@
   $sum: ($px / $base) * 1rem;
   @return $sum;
 }
+@function vw($px, $base: 375) {
+  $sum: ((30 * $px) / $base);
+  @return $sum + vw;
+}

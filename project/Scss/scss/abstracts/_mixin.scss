@@ -23,3 +23,28 @@
   background: url(#{$imgurl}#{$imgfile}) no-repeat $x $y $bgcolor;
   background-size: $width $height;
 }
+
+// 클래스명, 모서리둥근, 높이, 패딩, 폰트크기, 폰트색상, 선색상, 배경색
+@each $class, $br, $hig, $pad, $fs, $color, $borderColor, $bg in $badgeSetting {
+  .#{$class} {
+    border-radius: rem($br);
+    height: rem($hig);
+    padding: 0 rem($pad);
+    font-size: rem($fs);
+    color: $color;
+    border: 1px solid $borderColor;
+    background-color: $bg;
+  }
+}
+
+@mixin hide {
+  overflow: hidden;
+  position: absolute;
+  border: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+.hide {
+  @include hide;
+}

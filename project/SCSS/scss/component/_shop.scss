@@ -1,0 +1,72 @@
+.shop-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: rem(15);
+  &__thumb {
+    position: relative;
+    background-color: $greyf6;
+    border-radius: rem(12);
+    overflow: hidden;
+    .badge {
+      @include position(left, rem(12), top, rem(12));
+    }
+    &__large {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    &__small {
+      @include position(right, rem(8), bottom, rem(8));
+      width: vw(164);
+      height: vw(164);
+      border-radius: 100%;
+      border: 3px solid $greyd6;
+      background-color: $white;
+    }
+  }
+  &__title {
+    font-size: rem(13);
+    color: $grey1e;
+    font-weight: 500;
+    line-height: rem(18);
+  }
+  &__price {
+    display: grid;
+    gap: rem(2) rem(4);
+    grid-template-columns: minmax(rem(40), auto) minmax(rem(40), 1fr);
+
+    &--sale {
+      grid-column: 1 / 3;
+      color: $red;
+      font-size: rem(13);
+      font-weight: 700;
+      line-height: rem(18);
+    }
+    &--original {
+      color: $grey83;
+      font-size: rem(11);
+      font-weight: 500;
+      line-height: rem(16);
+      text-decoration: line-through;
+    }
+    &--sell {
+      color: $grey1e;
+      font-size: rem(13);
+      font-weight: 700;
+      line-height: rem(18);
+    }
+  }
+  &__rating {
+    @include bg("ico_rate.svg", left);
+    padding-left: rem(18);
+    font-weight: 500;
+    font-size: rem(11);
+    line-height: rem(16);
+    color: $grey1e;
+  }
+
+  &__info {
+    display: grid;
+    gap: rem(3);
+  }
+}

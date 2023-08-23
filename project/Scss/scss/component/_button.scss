@@ -27,5 +27,14 @@
       font-size: rem(11);
       font-weight: 500;
     }
+    .shop-list & {
+      width: rem(20);
+      height: rem(20);
+    }
+  }
+  &-like {
+    @include bg("ico_heart.svg", center);
+    width: rem(20);
+    height: rem(20);
   }
 }
