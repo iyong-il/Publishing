@@ -1,0 +1,333 @@
+@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700);
+
+body { /* coding */
+	margin: 20px;
+}
+
+/* GNB CSS1 */
+#cssmenu { /* coding */
+	display: block;
+	position: relative;
+	z-index: 9999;
+	margin: 0;
+	padding: 0;
+	line-height: 1;
+	width: auto;
+	font-family: "Open Sans", sans-serif;
+	background: #4cb6ea;
+}
+#cssmenu ul { /* coding */
+	display: block;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+#cssmenu ul:after,
+#cssmenu:after { /* coding */
+	content: "";
+	display: block;
+	clear: both;
+	height: 0;
+	visibility: hidden;
+	font-size: 0;
+}
+#cssmenu ul li { /* coding */
+	display: block;
+	position: relative;
+	margin: 0;
+	padding: 0;
+}
+#cssmenu > ul > li { /* coding */
+	float: left;
+	width: auto;
+}
+#cssmenu > ul > li:after { /* coding *//* 1Depth background color */
+	content: "";
+	display: block;
+	position: absolute;
+	z-index: 0;
+	top: 0;
+	width: 100%;
+	height: 0;
+	background: #fff;
+	-webkit-transition: height 0.2s;
+	transition: height 0.2s;
+}
+#cssmenu ul li a { /* coding */
+	display: block;
+	margin: 0;
+	text-decoration: none;
+	-webkit-transition: color 0.2s ease;
+	transition: color 0.2s ease;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+#cssmenu > ul > li > a { /* coding */
+	display: block;
+	position: relative;
+	z-index: 2;
+	padding: 15px 20px;
+	font-size: 15px;
+	font-weight: 400;
+	letter-spacing: 1px;
+	color: #fff;
+}
+#cssmenu ul li ul { /* coding */
+	display: block;
+	position: absolute;
+	left: -9999px;
+	top: auto;
+	width: 170px;
+}
+#cssmenu > ul > li.has-sub > a { /* coding */
+	padding-right: 40px;
+}
+#cssmenu > ul > li.has-sub > a:after { /* coding */
+	content: "";
+	display: block;
+	position: absolute;
+	right: 14px;
+	top: 16px;
+	width: 12px;
+	height: 12px;
+	background: #fff;
+	border-radius: 13px;
+}
+#cssmenu > ul > li.has-sub > a:before { /* coding */
+	content: "";
+	display: block;
+	position: absolute;
+	z-index: 2;
+	right: 16px;
+	top: 21px;
+	width: 0;
+	height: 0;
+	border: 4px solid transparent;
+	border-top-color: #4cb6ea;
+}
+
+/* EVENT coding1 */
+#cssmenu > ul > li:hover:after,
+#cssmenu > ul > li.active:after { /* coding */
+	height: 100%;
+}
+#cssmenu > ul > li:hover > a,
+#cssmenu > ul > li.active > a { /* coding */
+	color: #000;
+}
+#cssmenu > ul > li:hover > a:after,
+#cssmenu > ul > li.active > a:after { /* coding */
+	background: #000;
+}
+#cssmenu > ul > li:hover > a:before,
+#cssmenu > ul > li.active > a:before { /* coding */
+	border-top-color: #fff;
+}
+#cssmenu > ul > li:hover > ul { /* coding */
+	left: 0;
+}
+
+/* GNB CSS2 */
+#cssmenu ul li ul li { /* coding */
+	display: block;
+	position: absolute;
+	width: 170px;
+	max-height: 0;
+	background: #fff;
+	-webkit-transition: max-height 0.4s ease-out;
+	transition: max-height 0.4s ease-out;
+}
+#cssmenu ul li ul li a { /* coding */
+	display: block;
+	padding: 11px 10px 11px 20px;
+	width: 170px;
+	text-transform: none;
+	letter-spacing: 0;
+	font-size: 14px;
+	font-weight: 400;
+	color: #000;
+}
+#cssmenu ul li ul li.has-sub:after { /* coding */
+	content: "";
+	display: block;
+	position: absolute;
+	z-index: 1;
+	right: 15px;
+	top: 13px;
+	width: 10px;
+	height: 10px;
+	background: #000;
+	border-radius: 5px;
+}
+#cssmenu ul li ul li.has-sub:before { /* coding */
+	content: "";
+	display: block;
+	position: absolute;
+	z-index: 2;
+	right: 15px;
+	top: 15px;
+	width: 0;
+	height: 0;
+	border: 3px solid transparent;
+	border-left-color: #fff;
+}
+#cssmenu #menu-button { /* coding */
+	display: none;
+}
+
+/* EVENT CSS2 */
+#cssmenu > ul > li:hover > ul > li { /* coding */
+	position: relative;
+	max-height: 72px;
+}
+#cssmenu ul li ul li:hover > a,
+#cssmenu ul li ul li.active > a { /* coding */
+	color: #4cb6ea;
+}
+#cssmenu ul li ul li:hover:after,
+#cssmenu ul li ul li.active:after { /* coding */
+	background: #4cb6ea;
+}
+#cssmenu ul li ul li:hover > ul { /* coding */
+	left: 100%;
+	top: 0;
+}
+#cssmenu ul li ul li:hover > ul > li { /* coding */
+	position: relative;
+	max-height: 72px;
+}
+/*
+#cssmenu.align-right ul li ul li.has-sub:after {
+	left: 15px;
+	right: auto;
+}
+#cssmenu.align-right ul li ul li.has-sub:before {
+	left: 15px;
+	right: auto;
+	border-left-color: transparent;
+	border-right-color: #fff;
+}
+#cssmenu.align-center > ul > li {
+	display: inline-block;
+	float: none;
+}
+#cssmenu.align-center > ul {
+	text-align: center;
+}
+#cssmenu.align-center ul ul {
+	text-align: left;
+}
+#cssmenu.align-right > ul {
+	float: right;
+}
+#cssmenu.align-right > ul > li:hover > ul {
+	left: auto;
+	right: 0;
+}
+#cssmenu.align-right ul ul li:hover > ul {
+	left: auto;
+	right: 100%;
+}
+#cssmenu.align-right ul ul li a {
+	text-align: right;
+}
+*/
+
+/* Responsive CSS */
+@media all and (max-width: 800px) {
+	#cssmenu #menu-button { /* coding */
+		display: block;
+		padding: 15px 20px;
+		width: 100%;
+		text-transform: uppercase;
+		font-size: 16px;
+		font-weight: 500;
+		letter-spacing: 1px;
+		color: #fff;
+		cursor: pointer;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+	#cssmenu #menu-button:after { /* coding */
+		content: "";
+		display: block;
+		position: absolute;
+		right: 20px;
+		top: 16px;
+		width: 22px;
+		height: 3px;
+		border-top: 2px solid #fff;
+		border-bottom: 2px solid #fff;
+	}
+	#cssmenu #menu-button:before { /* coding */
+		content: "";
+		display: block;
+		position: absolute;
+		right: 20px;
+		top: 26px;
+		width: 22px;
+		height: 3px;
+		border-top: 2px solid #fff;
+	}
+	#cssmenu ul { /* coding */
+		width: 100%;
+	}
+	#cssmenu > ul { /* coding */
+		max-height: 0;
+		overflow: hidden;
+		-webkit-transition: max-height 0.35s ease-out;
+		transition: max-height 0.35s ease-out;
+	}
+	#cssmenu > ul.open { /* coding */
+		max-height: 1000px;
+		border-top: 1px solid rgba(110,110,110,.25);
+	}
+	#cssmenu ul > li { /* coding */
+		float: none;
+		width: 100%;
+	}
+	#cssmenu ul > li:after { /* coding */
+		display: none;
+	}
+	#cssmenu > ul > li > ul { /* coding */
+		display: block;
+		width: 100%;
+	}
+	#cssmenu > ul > li > ul > li { /* coding */
+		display: block;
+		width: 100%;
+	}
+	#cssmenu > ul > li > ul > li > a { /* coding */
+		display: block;
+		width: 100%;
+	}
+	#cssmenu ul li ul li a { /* coding */
+		width: 100%;
+	}
+	#cssmenu ul li.has-sub > a:after,
+	#cssmenu ul li.has-sub > a:before,
+	#cssmenu ul li ul li.has-sub:after,
+	#cssmenu ul li ul li.has-sub:before { /* coding */
+		display: none;
+	}
+	#cssmenu ul li ul,
+	#cssmenu ul li ul li ul,
+	#cssmenu ul li ul li:hover > ul { /* coding */
+		position: relative;
+		left: 0;
+		right: auto;
+	}
+	#cssmenu ul li ul li,
+	#cssmenu ul li:hover > ul > li { /* coding */
+		position: relative;
+		max-height: 999px;
+		background: none;
+	}
+	#cssmenu ul li ul li a { /* coding */
+		padding: 8px 20px 8px 35px;
+		color: #fff;
+	}
+	#cssmenu ul li ul li:hover > a { /* coding */
+		color: #000;
+	}
+}

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+<title>basic :: Variety of Events</title>
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic">
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/style.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.js"></script>
+<!-- https://www.tivoliair.com:446/tivoliair2/index.php#front/23 -->
+</head>
+
+<body>
+<div class="wrapper">
+	<div class="section">
+		<div class="page"><span class="title">section01</span></div>
+		<div class="page loading"><span class="title">section02</span></div>
+		<div class="page loading"><span class="title">section03</span></div>
+		<div class="page loading"><span class="title">section04</span></div>
+		<div class="page loading"><span class="title">section05</span></div>
+	</div>
+	<div class="aside">
+		<ul>
+			<li class="item"><a href="#none">1</a></li>
+			<li class="item"><a href="#none">2</a></li>
+			<li class="item"><a href="#none">3</a></li>
+			<li class="item"><a href="#none">4</a></li>
+			<li class="item"><a href="#none">5</a></li>
+		</ul>
+	</div>
+	<div class="prev"><a href="#none">previous</a></div>
+	<div class="next"><a href="#none">next</a></div>
+</div>
+
+<script>
+var moving=false;
+var num=0;
+
+function doLayout(){
+	// console.log("doLayout function");
+	var w=window.innerWidth*(-1)*num;
+	// console.log("w : "+w);
+
+	$(".section").css({left:w});
+	$(".section .page").removeClass("loading")
+	.each(function(){
+		// console.log("index : "+$(this).index());
+		$(this).css({left:window.innerWidth*($(this).index()), width:window.innerWidth, height:innerHeight});
+	});
+}
+function controlBtn(){
+	// console.log("controlBtn function");
+	$(".aside .item").removeClass("on");
+	$(".aside .item").eq(num).addClass("on");
+
+	if(num == 0){
+		$(".prev").removeClass("on");
+		$(".next").addClass("on");
+	}else if(num == 4){
+		$(".prev").addClass("on");
+		$(".next").removeClass("on");
+	}else{
+		$(".prev").addClass("on");
+		$(".next").addClass("on");
+	}
+}
+$(function(){
+	doLayout();
+	controlBtn();
+
+	// 1) aside click event
+	$(".aside .item a").click(function(e){
+		e.preventDefault();
+		var order=$(this).parent("li").index();
+		num=order;
+		// console.log("order : "+order);
+		var offsetL=window.innerWidth*(-1)*num;
+		$(".aside .item").removeClass("on");
+		$(".aside .item").eq(num).addClass("on");
+
+		if(!moving){
+			moving=true;
+			$(".section").animate({left:offsetL}, 800, function(){
+				moving=false;
+				controlBtn();
+			});
+		}
+	});
+
+	// 2) next click event
+	$(".next").click(function(){
+		var w=window.innerWidth;
+		var offsetL=$(".section").offset().left;
+
+		if(!moving){
+			moving=true;
+			if(num < 4){
+				num+=1;
+				// console.log("num : "+num);
+				offsetL-=w;
+				$(".section").animate({left:offsetL}, 800, function(){
+					moving=false;
+					controlBtn();
+				});
+			}
+		}
+	});
+
+	// 3) prev click event
+	$(".prev").click(function(){
+		var w=window.innerWidth;
+		var offsetL=$(".section").offset().left;
+
+		if(!moving){
+			moving=true;
+			if(num > 0){
+				num-=1;
+				// console.log("num : "+num);
+				offsetL+=w;
+				$(".section").animate({left:offsetL}, 800, function(){
+					moving=false;
+					controlBtn();
+				});
+			}
+		}
+	});
+
+	// 4) keybord event
+	$(this).keyup(function(e){
+		// console.log("keybord event");
+		// console.log("e.keyCode : "+e.keyCode);
+		if(!moving){
+			moving=true;
+			var w=window.innerWidth;
+			var offsetL=$(".section").offset().left;
+
+			if(e.keyCode == 37){
+				if(num < 4){
+					num+=1;
+					offsetL-=w;
+				}
+			}else if(e.keyCode == 39){
+				if(num > 0){
+					num-=1;
+					offsetL+=w;
+				}
+			}
+			$(".section").animate({left:offsetL}, 800, function(){
+				moving=false;
+				controlBtn();
+			});
+		}
+	});
+
+	// 5) mouse wheel event
+	$(".section").mousewheel(function(e){
+		if(!moving){
+			moving=true;
+			var w=window.innerWidth;
+			var offsetL=$(".section").offset().left;
+			// console.log(e.deltaX, e.deltaY, e.deltaFactor);
+
+			if(e.deltaY == -1){
+				if(num < 4){
+					num+=1;
+					offsetL-=w;
+				}
+			}else if(e.deltaY == 1){
+				if(num > 0){
+					num-=1;
+					offsetL+=w;
+				}
+			}
+			$(".section").animate({left:offsetL}, 800, function(){
+				moving=false;
+				controlBtn();
+			});
+		}
+	});
+});
+</script>
+</body>
+</html>

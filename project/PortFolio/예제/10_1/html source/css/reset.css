@@ -1,0 +1,164 @@
+/*
+  Zerotheme.com | Free Html5 Responsive Templates
+  Author URI: http://www.zerotheme.com/
+*/
+
+@import url(https://fonts.googleapis.com/css?family=Fredericka+the+Great);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+/* Reset1 */
+a, abbr, acronym, address, applet, article, aside, audio, b, blockquote, big, body, center, canvas, caption, cite, code, command, datalist, dd, del, details, dfn, dl, div, dt, em, embed, fieldset, figcaption, figure, font, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, keygen, label, legend, li, meter, nav, object, ol, output, p, pre, progress, q, s, samp, section, small, span, source, strike, strong, sub, sup, table, tbody, tfoot, thead, th, tr, tdvideo, tt, u, ul, var {
+	margin: 0;
+	padding: 0;
+	vertical-align: top;
+	font-size: 100%;
+	background: transparent;
+	border: 0 none;
+	border: 0;
+	outline: 0;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+table, table td {
+	padding: 0;
+	border: none;
+	border-collapse: collapse;
+}
+img {
+	vertical-align:top;
+}
+embed {
+	vertical-align: top;
+}
+article, aside, audio, canvas, command, datalist, details, embed, figcaption, figure, footer, header, hgroup, keygen, meter, nav, output, progress, section, source, video {
+	display: block;
+}
+mark, rp, rt, ruby, summary, time {
+	display: inline;
+}
+input, textarea {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+}
+iframe {
+	margin: 0;
+	padding: 0;
+	border: 0;  
+}
+input, textarea, select {
+	margin: 0;
+	padding: 0;
+}
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/* Reset2 */
+html {
+	-webkit-text-size-adjust: none;
+}
+.video embed, .video object, .video iframe {
+	width: 100%;
+	height: auto;
+}
+img {
+	max-width: 100%;
+	width: auto\9; /* ie8 */
+	height: auto;
+}
+a {
+	text-decoration: none;
+	color: #4c4c4c;
+}
+a:hover {
+	text-decoration: none;
+	opacity: 0.9;
+}
+h1, h2 {
+	line-height: 30px;
+	font-size: 25px;
+}
+h3, h4 {
+	line-height: 20px;
+	font-size: 20px;
+}
+h5, h6 {
+	line-height: 16px;
+	font-size: 16px;
+}
+p {
+	margin: 10px 0;
+}
+.t-center {
+	text-align: center;
+}
+.t-left {
+	text-align: left;
+}
+.t-right {
+	text-align: right;
+}
+.f-right {
+	float: right;
+}
+.f-left {
+	float: left;
+}
+.post {}
+.post:after, .post:before, article:after, article:before, section:after, section:before {
+	content: "\0020";
+	display: block;
+	clear: both;
+	width: 0;
+	height: 0;
+	visibility: hidden;
+}
+.clear {
+	content: "\0020";
+	display: block;
+	clear: both;
+	height: 0;
+	visibility: hidden;
+}
+.clearfix:after, .clearfix:before {
+	content: "\0020";
+	display: block;
+	clear: both;
+	width: 0;
+	height: 0;
+	visibility: hidden;  
+}
+hr.line {
+	margin: 0;
+	padding: 0;
+	border-color: #e9e9e9;
+}
+
+/* color */
+.color-blue, .color-red, .color-yellow, .color-green {
+	font-family: "Fredericka the Great", cursive;
+	font-weight: 500;
+}
+.color-blue {
+	color: #2fbfca !important;
+}
+.color-red {
+	color: #fc5b78 !important;
+}
+.color-yellow {
+	color: #e8d01d !important;
+}
+.color-green {
+	color: #17ad4a !important;
+}
+.color-orange {
+	color: #ff993f !important;
+}

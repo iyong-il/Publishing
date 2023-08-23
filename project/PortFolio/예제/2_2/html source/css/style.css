@@ -1,0 +1,87 @@
+@charset "UTF-8";
+
+body {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1em;
+}
+.section {
+	position: relative;
+}
+.section .page {
+	position: absolute;
+}
+.section .page.loading {
+	display: none;
+}
+.section .page .title {
+	display: inline-block;
+	padding: 60px 0 0 50px;
+	font-size: 2.5em;
+	font-weight: 300;
+	color: #8ac007;
+}
+.aside {
+	position: fixed;
+	left: 35px;
+	bottom: 20px;
+}
+.aside ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.aside li {
+	display: inline-block;
+}
+.aside li a {
+	display: block;
+	margin: 10px;
+	width: 12px;
+	height: 12px;
+	overflow: hidden;
+	line-height: 50px;
+	text-indent: -1000px;
+	background: #eee;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+}
+.aside li.on a {
+	background: #8ac007;
+}
+.aside li a:hover {
+	background: #ccc;
+}
+.prev, .next {
+	position: absolute;
+	top: 50%;
+	padding: 10px 16px;
+	text-align: center;
+	background: rgba(0,0,0,.4);
+	-webkit-transition: all 0.5s;
+	transition: all 0.5s;
+}
+.prev {
+	left: -100px;
+}
+.next {
+	right: -75px;
+}
+.prev.on {
+	left: 0;
+}
+.next.on {
+	right: 0;
+}
+.prev a, .next a {
+	text-decoration: none;
+	color: #fff;
+}
+
+@media (max-width: 810px) {
+	.aside ul a {
+		display: none;
+	}
+}

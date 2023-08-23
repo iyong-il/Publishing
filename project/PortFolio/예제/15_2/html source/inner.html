@@ -1,0 +1,441 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<title>실무 웹으로 시작하는 jQuery 강의 노트</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="content-language" content="ko">
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/main.css">
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+$(function(){
+	// 1) fadeTo()
+	var $fadeBtn=$(".fadeTo button");
+	var $fadeArea=$(".fadeTo .imageArea");
+
+	$fadeBtn.each(function(){
+		if($(this).attr("title") == "1"){
+			$(this).addClass("active");
+		}
+	});
+	$fadeBtn.on("click", function(){
+		var opacity=$(this).attr("title");
+		// console.log("opacity : "+opacity);
+		$fadeArea.fadeTo("slow", opacity);
+		$fadeBtn.removeClass("active");
+		$(this).addClass("active");
+	});
+
+
+	// 2) slideUp() / slideDown()
+	var $slideUpBtn=$("button[title='up']");
+	var $slideDownBtn=$("button[title='down']");
+	var $slideUpDownArea=$(".slideUpDown .imageArea");
+	$slideDownBtn.addClass("active");
+
+	$slideUpBtn.click(function(){
+		$slideUpBtn.addClass("active");
+		$slideDownBtn.removeClass("active");
+
+		$slideUpDownArea.slideUp(1000, function(){
+			// console.log("지금 상태는 "+$(this).css("display")+"입니다.");
+		});
+	});
+	$slideDownBtn.click(function(){
+		$slideUpBtn.removeClass("active");
+		$slideDownBtn.addClass("active");
+
+		$slideUpDownArea.slideDown(1000, function(){
+			// console.log("지금 상태는 "+$(this).css("display")+"입니다.");
+		});
+	});
+
+
+	// 3) slideLeft() / slideRight()
+	var $slideLeftBtn=$("button[title='left']");
+	var $slideRightBtn=$("button[title='right']");
+	var $slideLeftRigthArea=$(".slideLeftRight .imageArea");
+	$slideRightBtn.addClass("active");
+
+	$slideLeftBtn.click(function(){
+		$slideLeftBtn.addClass("active");
+		$slideRightBtn.removeClass("active");
+		$slideLeftRigthArea.animate({width:"0px"}, 1000);
+	});
+	$slideRightBtn.click(function(){
+		$slideLeftBtn.removeClass("active");
+		$slideRightBtn.addClass("active");
+		$slideLeftRigthArea.animate({width:"100%"}, 1000);
+	});
+
+
+	// 4) animate()
+	var $animateNav=$(".animate a");
+
+	$animateNav.hover(
+		function(){
+			var overColor=$(this).attr("data-bg");
+			$(this).stop().animate({"background-color":overColor, "color":"#fff"}, 300);
+		},
+		function(){
+			$(this).stop().animate({"background-color":"#eaeaea", "color":"#4b4848"}, 300);
+		}
+	);
+
+
+	// 5) sildeUp()
+	var $easingBtn=$(".easing button");
+	var $easingArea=$(".easing .imageArea");
+
+	$easingBtn.click(function(){
+		var easing=$(this).attr("data-ease");
+		$easingBtn.removeClass("active");
+		$(this).addClass("active");
+
+		$easingArea.slideUp(1000, easing, function(){
+			$(this).slideToggle();
+		});
+	});
+
+
+	// 6) animate()
+	var movingX;
+	var movingY;
+	var $movingArea=$(".backgroundAnimation img");
+
+	$movingArea.load(function(){
+		movingX=$(this).width();
+		movingY=$(this).height();
+		// console.log("movingX : "+movingX+", movingY : "+movingY);
+		startBackgroundAnimation();
+	});
+	function startBackgroundAnimation(){
+		var posx=Math.ceil(Math.random()*(400-movingX)); // x 위치로 움직일 수 있는 공간
+		var posy=Math.ceil( Math.random()*(200-movingY)); // y 위치로 움직일 수 있는 공간
+		var delayTime=Math.ceil(Math.random()*2000+2000); // 2000 ~ 4000
+		$movingArea.delay(delayTime).animate({left:posx, top:posy}, 5000, replay);
+	}
+	function replay(){
+		var posx=Math.ceil(Math.random()*(400-movingX));
+		var posy=Math.ceil(Math.random()*(200-movingY));
+		var delayTime=Math.ceil(Math.random()*2000+2000);
+		$movingArea.delay(delayTime).animate({left:posx, top:posy}, 5000, replay);
+	}
+
+
+	// 7) toggle()
+	var tabStatus=true;
+	var $toggleBtn=$(".toggle a");
+	var $toggleBanner=$(".toggle ul");
+
+	$toggleBtn.click(
+		function(){
+			if(!tabStatus){
+				tabStatus=true;
+				$toggleBanner.stop().animate({left:"0px"}, 1000);
+			}else{
+				tabStatus=false;
+				var w=$(this).parents(".imageArea").outerWidth();
+				$toggleBanner.stop().animate({left:-1*w+"px"}, 1000);
+			}
+		}
+	);
+
+	/*
+	// http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js
+	var $toggleBtn=$(".toggle a");
+	var $toggleBanner=$(".toggle ul");
+
+	$toggleBtn.toggle(
+		function(){
+			$toggleBanner.stop().animate({left:"0px"}, 1000);
+		},
+		function(){
+			var w=$(this).parents(".imageArea").outerWidth();
+			$toggleBanner.stop().animate({left:-1*w+"px"}, 1000);
+		}
+	);
+	*/
+
+
+	// 8) each()
+	var $eachMove=$(".each li");
+	var $eachResetBtn=$(".each button[title='reset']");
+	var $eachMoveBtn=$(".each button[title='move']");
+	var changeFlag=false;
+	$eachResetBtn.addClass("active");
+
+	$eachMoveBtn.click(function(){
+		$eachResetBtn.removeClass("active");
+		$eachMoveBtn.addClass("active");
+
+		$eachMove.each(function(index){
+			var w=$(this).parents(".imageArea").outerWidth()-15;
+			$(this).delay(index*500)
+				.animate({left:w+"px", "background-color":"#333"}, 2000, function(){
+					// console.log("index : "+index);
+					if(index == 10){
+						changeFlag=true;
+					}
+			});
+		});
+	});
+	$eachResetBtn.click(function(){
+		if(changeFlag){
+			$eachMove.each(function(){
+				changeFlag=false;
+				$eachResetBtn.addClass("active");
+				$eachMoveBtn.removeClass("active");
+				$(this).removeAttr("style");
+			});
+		}
+	});
+
+
+	// 9) animate()
+	var $easingMoveBtn=$(".easingOption button[title='move']");
+	var $easingSelect=$(".easingOption select");
+	var $easingBall=$(".easingOption .easeMovingBall");
+
+	$easingMoveBtn.click(function(){
+		var easing=$easingSelect.find("option:selected").html();
+		$easingBall.animate({left:"400px"}, 2000, easing).animate({left:"0px"}, 1000, easing);
+	});
+});
+</script>
+</head>
+
+<body>
+<header>
+	<div class="logo">
+		<a href="index.html">Web design Template</a>
+	</div>
+	<div id="menu_icon"></div>
+	<nav>
+		<ul>
+			<li><a href="index.html">portfolio</a></li>
+			<li><a href="#none">about</a></li>
+			<li><a href="#none">learn</a></li>
+			<li><a href="#none">blog</a></li>
+			<li><a href="#none">contact</a></li>
+		</ul>
+	</nav>
+	<div class="footer clearfix">
+		<ul class="social clearfix">
+			<li><a href="#none" class="fb" data-title="Facebook"></a></li>
+			<li><a href="#none" class="google" data-title="Google +"></a></li>
+			<li><a href="#none" class="behance" data-title="Behance"></a></li>
+			<li><a href="#none" class="rss" data-title="RSS"></a></li>
+		</ul>
+		<div class="rights">
+			<p>Copyright © 2015 enterdragon.</p>
+			<p>Template by <a href="#none">pixelhint.com</a></p>
+		</div>
+	</div>
+</header>
+
+<section class="main clearfix">
+	<section class="top">
+		<div class="wrapper content_header clearfix">
+			<div class="work_nav">
+				<ul class="btn clearfix">
+					<li><a href="#none" class="previous" data-title="Previous"></a></li>
+					<li><a href="index.html" class="grid" data-title="Portfolio"></a></li>
+					<li><a href="#none" class="next" data-title="Next"></a></li>
+				</ul>
+				<h1 class="title">jQuery lecture : level1</h1>
+			</div>
+		</div>
+	</section>
+	<section class="wrapper">
+		<div class="content">
+			<div class="lecture clearfix">
+				<h2>fadeTo</h2>
+				<div class="fadeTo">
+					<div class="imageArea"></div>
+					<div class="buttonArea">
+						<button title="0">0</button>
+						<button title="0.3">0.3</button>
+						<button title="0.6">0.6</button>
+						<button title="1">1</button>
+					</div>
+				</div>
+				<p>
+					<span class="description">
+						The .fadeTo() method animates the opacity of the matched elements. It is similar to the .fadeIn() method but that method unhides the element and always fades to 100% opacity.<br><br>
+						Durations are given in milliseconds; higher values indicate slower animations, not faster ones. The strings 'fast' and 'slow' can be supplied to indicate durations of 200 and 600 milliseconds, respectively. If any other string is supplied, the default duration of 400 milliseconds is used. Unlike the other effect methods, .fadeTo() requires that duration be explicitly specified.
+					</span>
+					<span class="question"><a href="#none">Adjust the opacity of the matched elements.</a></span>
+				</p>
+			</div>
+			<div class="lecture clearfix">
+				<h2>slideUp, slideDown</h2>
+				<div class="slideUpDown">
+					<div class="imageArea"></div>
+					<div class="buttonArea">
+						<button title="up">up</button>
+						<button title="down">down</button>
+					</div>
+				</div>
+				<p>
+					<span class="description">
+						The .slideUp() method animates the height of the matched elements. This causes lower parts of the page to slide up, appearing to conceal the items. Once the height reaches 0 (or, if set, to whatever the CSS min-height property is), the display style property is set to none to ensure that the element no longer affects the layout of the page.<br><br>
+						Durations are given in milliseconds; higher values indicate slower animations, not faster ones. The strings 'fast' and 'slow' can be supplied to indicate durations of 200 and 600 milliseconds, respectively. If any other string is supplied, or if the duration parameter is omitted, the default duration of 400 milliseconds is used.
+					</span>
+					<span class="question"><a href="#none">Hide the matched elements with a sliding motion.</a></span>
+				</p>
+			</div>
+			<div class="lecture clearfix">
+				<h2>animate</h2>
+				<div class="slideLeftRight">
+					<div class="imageArea"></div>
+					<div class="buttonArea">
+						<button title="left">left</button>
+						<button title="right">right</button>
+					</div>
+				</div>
+				<p>
+					<span class="description">
+						The .animate() method allows us to create animation effects on any numeric CSS property. The only required parameter is a plain object of CSS properties. This object is similar to the one that can be sent to the .css() method, except that the range of properties is more restrictive.<br><br>
+						All animated properties should be animated to a single numeric value, except as noted below; most properties that are non-numeric cannot be animated using basic jQuery functionality (For example, width, height, or left can be animated but background-color cannot be, unless the jQuery.Color() plugin is used). Property values are treated as a number of pixels unless otherwise specified. The units em and % can be specified where applicable.
+					</span>
+					<span class="question"><a href="#none">Perform a custom animation of a set of CSS properties.</a></span>
+				</p>
+			</div>
+			<div class="lecture clearfix">
+				<h2>background animate</h2>
+				<div class="animate">
+					<div class="gnb">
+						<ul>
+							<li><a href="#" data-bg="#00c8c3">HTML</a></li>
+							<li><a href="#" data-bg="#a0c800">CSS</a></li>
+							<li><a href="#" data-bg="#00c8c3">Mobile</a></li>
+							<li><a href="#" data-bg="#a0c800">jQuery</a></li>
+						</ul>
+					</div>
+				</div>
+				<p>
+					<span class="description">
+						jQuery UI is a curated set of user interface interactions, effects, widgets, and themes built on top of the jQuery JavaScript Library. Whether you're building highly interactive web applications or you just need to add a date picker to a form control, jQuery UI is the perfect choice.
+					</span>
+					<span class="question"><a href="#none">What's New in jQuery UI 1.11?</a></span>
+				</p>
+			</div>
+			<div class="lecture clearfix">
+				<h2>easing effect</h2>
+				<div class="easing">
+					<div class="imageArea"></div>
+					<div class="buttonArea">
+						<button data-ease="easeOutQuart">easeOutQuart</button>
+						<button data-ease="easeInOutElastic">easeInOutElastic</button>
+						<button data-ease="easeOutBack">easeOutBack</button>
+						<button data-ease="easeOutBounce">easeOutBounce</button>
+					</div>
+				</div>
+				<p>
+					<span class="description">
+						All easings provided by jQuery UI are drawn above, using an HTML canvas element. Click a diagram to see the easing in action.
+					</span>
+					<span class="question"><a href="#none">Want to learn more about easings? Check out the API documentation.</a></span>
+				</p>
+			</div>
+			<div class="lecture clearfix">
+				<h2>background animation</h2>
+				<div class="backgroundAnimation">
+					<div class="imageArea">
+						<img src="images/title_image.jpg" alt="background">
+					</div>
+				</div>
+				<p>
+					<span class="description">
+						All animated properties should be animated to a single numeric value, except as noted below; most properties that are non-numeric cannot be animated using basic jQuery functionality (For example, width, height, or left can be animated but background-color cannot be, unless the jQuery.Color() plugin is used). Property values are treated as a number of pixels unless otherwise specified. The units em and % can be specified where applicable.<br><br>
+						In addition to style properties, some non-style properties such as scrollTop and scrollLeft, as well as custom properties, can be animated.
+					</span>
+					<span class="question"><a href="#none">Perform a custom animation of a set of CSS properties.</a></span>
+				</p>
+			</div>
+			<div class="lecture clearfix">
+				<h2>toggle</h2>
+				<div class="toggle">
+					<div class="imageArea">
+						<div class="tab"><a href="#none"></a></div>
+						<ul>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>
+					</div>
+				</div>
+				<p>
+					<span class="description">
+						The matched elements will be revealed or hidden immediately, with no animation, by changing the CSS display property. If the element is initially displayed, it will be hidden; if hidden, it will be shown. The display property is saved and restored as needed. If an element has a display value of inline, then is hidden and shown, it will once again be displayed inline.<br><br>
+						When a duration, a plain object, or a single "complete" function is provided, .toggle() becomes an animation method. The .toggle() method animates the width, height, and opacity of the matched elements simultaneously. When these properties reach 0 after a hiding animation, the display style property is set to none to ensure that the element no longer affects the layout of the page.
+					</span>
+					<span class="question"><a href="#none">Display or hide the matched elements.</a></span>
+				</p>
+			</div>
+
+			<div class="lecture clearfix">
+				<h2>each</h2>
+				<div class="each">
+					<div class="imageArea">
+						<ul>
+							<li>1</li>
+							<li>2</li>
+							<li>3</li>
+							<li>4</li>
+							<li>5</li>
+							<li>6</li>
+							<li>7</li>
+							<li>8</li>
+							<li>9</li>
+							<li>10</li>
+							<li>11</li>
+						</ul>
+					</div>
+					<div class="buttonArea">
+						<button title="reset">reset</button>
+						<button title="move">move</button>
+					</div>
+				</div>
+				<p>
+					<span class="description">
+						The $.each() function is not the same as $(selector).each(), which is used to iterate, exclusively, over a jQuery object. The $.each() function can be used to iterate over any collection, whether it is an object or an array. In the case of an array, the callback is passed an array index and a corresponding array value each time. (The value can also be accessed through the this keyword, but Javascript will always wrap the this value as an Object even if it is a simple string or number value.) The method returns its first argument, the object that was iterated.<br><br>
+						Note: The $.each() function internally retrieves and uses the length property of the passed collection. So, if the collection has a property called length — e.g. {bar: 'foo', length: 10} — the function might not work as expected.
+					</span>
+				</p>
+			</div>
+
+			<div class="lecture clearfix">
+				<h2>easing option</h2>
+				<div class="easingOption">
+					<select>
+						<option>linear</option>
+						<option>swing</option>
+						<option>easeInQuad</option>
+						<option>easeOutQuad</option>
+						<option>easeInOutQuad</option>
+						<option>easeInCubic</option>
+					</select>
+					<div class="easeMovingBall"></div>
+					<div class="buttonArea">
+						<button title="move">move</button>
+					</div>
+				</div>
+				<p>
+					<span class="description">
+						Easing functions specify the speed at which an animation progresses at different points within the animation. jQuery core ships with two easings: linear, which progresses at a constant pace throughout the animation, and swing (jQuery core's default easing), which progresses slightly slower at the beginning and end of the animation than it does in the middle of the animation. jQuery UI provides several additional easing functions, ranging from variations on the swing behavior to customized effects such as bouncing.<br><br>
+						Some easings will result in negative values during the animation. Depending on the properties that are being animated, the actual value may be clamped at zero. For example, you can animate left to a negative value, but you cannot animate height or opacity to a negative value.
+						<span class="question"><a href="#none">Want to learn more about easings? Check out the API documentation.</a></span>
+					</span>
+				</p>
+			</div>
+		</div>
+	</section>
+</section>
+</body>
+</html>

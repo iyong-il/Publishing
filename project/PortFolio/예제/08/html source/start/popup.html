@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+<title>Portfolio Site</title>
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400italic">
+<style>
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1rem;
+}
+a {
+	text-decoration: none;
+	color: #666;
+}
+section {
+	display: block;
+}
+.popup_area {
+	padding: 10px;
+	width: 380px;
+	height: 350px;
+}
+.close_area {
+	margin: 0 auto;
+	width: 120px;
+	height: 30px;
+	line-height: 16px;
+}
+.close_area .input {
+	display: block;
+	float: left;
+	padding-top: 5px;
+	height: 25px;
+}
+.close_area .text {
+	display: block;
+	float: left;
+	padding-left: 2px;
+	height: 30px;
+	line-height: 28px;
+}
+a.close {
+	display: block;
+	width: 400px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	background: #f4f4f4;
+}
+</style>
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<!-- http://publisherj.dothome.co.kr/xe/ -->
+<!-- https://www.w3.org/standards/ -->
+</head>
+
+<body>
+<div class="popup_container">
+	<section class="popup_area">popup area</section>
+	<form name="checkClose">
+		<section class="close_area">
+			<span class="input"><input type="checkbox" name="notice"></span>
+			<span class="text">today close</span>
+		</section>
+		<a href="#none" onclick="closePopup();" class="close">close window</a>
+	</form>
+</div>
+
+<script>
+</script>
+</body>

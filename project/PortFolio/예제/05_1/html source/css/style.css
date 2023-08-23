@@ -1,0 +1,315 @@
+@charset "utf-8";
+
+/* layout */
+body {
+	background: #333;
+}
+.accessbility_notice {
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 100;
+	width: 100%;
+	-webkit-transition: top 0.4s;
+	transition: top 0.4s;
+}
+.accessbility_notice a {
+	display: block;
+	padding: 10px 0;
+	width: 100%;
+	min-width: 480px;
+	line-height: 20px;
+	text-align: center;
+	font-size: 0.813rem;
+	background: #f7f7f7;
+	color: #666;
+}
+#wrap {
+	min-width: 320px;
+	background: #fff;
+}
+#header {
+	position: relative;
+	z-index: 10;
+	background: #fff;
+	border-top: 3px solid #a3a3a3;
+	border-bottom: 1px solid #0377ba;
+}
+#header .container {
+	position: relative;
+	margin: 0 auto;
+	max-width: 990px;
+	min-height: 100px;
+}
+#header .container h1 {
+	position: absolute;
+	left: 30px;
+	top: 36px;
+	z-index: 1;
+}
+#header .container h1 a {
+	text-decoration: none;
+	font-size: 1.000rem;
+	font-weight: 400;
+	color: #0377ba;
+}
+#gnb {
+	position: absolute;
+	right: 45px;
+	top: 40px;
+	width: 100%;
+}
+#gnb .navi {
+	position: absolute;
+	right: 0;
+	top: 0;
+	border-left: 1px dashed #ccc;
+}
+#gnb .navi li {
+	float: left;
+	font-size: 0.875rem;
+	font-weight: 400;
+	border-right: 1px dashed #ccc;
+}
+#gnb .navi li a {
+	padding: 0 20px;
+	color: #333;
+}
+#footer {
+	position: relative;
+	padding: 60px 0 35px;
+	line-height: 35px;
+	text-align: center;
+	font-size: 0.750rem;
+	font-weight: 400;
+	letter-spacing: 2px;
+	background: #111;
+	color: #edebec;
+}
+#footer em {
+	display: block;
+	color: #b1bbc6;
+}
+
+/* WEB STANDARDS CROSS BROWSING */
+.main_area {
+	position: relative;
+	padding: 110px 0 60px;
+	line-height: 24px;
+	text-align: center;
+	font-size: 0.813rem;
+	background: #0377ba;
+	color: #9bc2d8;
+}
+.main_area .browser {
+	position: relative;
+	margin-bottom: 40px;
+}
+.main_area .browser img {
+	margin: 0 3px;
+	width: 140px;
+}
+.main_area em {
+	display: block;
+	margin-bottom: 25px;
+	line-height: 46px;
+	text-transform: uppercase;
+	font-family: "Playfair Display", serif;
+	font-size: 2.250rem;
+	font-weight: 400;
+	color: #fefefe;
+}
+
+/* What is Web standards */
+.what_is {
+	position: relative;
+	background: #eee;
+}
+.what_is .container {
+	position: relative;
+	margin: 0 auto;
+	padding: 80px 0 100px;
+	max-width: 990px;
+	text-align: center;
+}
+.what_is .container h2 {
+	position: relative;
+	margin-bottom: 25px;
+	font-family: "Playfair Display", serif;
+	font-size: 2.250rem;
+	font-weight: 400;
+	color: #555;
+}
+.what_is .container .description {
+	position: relative;
+	margin-bottom: 50px;
+	line-height: 24px;
+	font-size: 0.813rem;
+	color: #666;
+}
+.what_is .container ul {
+	position: relative;
+	margin: 0 15px;
+}
+.what_is .container ul:after {
+	content: "";
+	display: table;
+	clear: both;
+	overflow: auto;
+}
+.what_is .container ul li {
+	position: relative;
+	float: left;
+	width: 20%;
+}
+.what_is .container ul li .list {
+	position: relative;
+	margin: 0 auto 10px;
+	width: 120px;
+	overflow: hidden;
+	background: #fff;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+}
+.what_is .container ul li .list img {
+	width: 100%;
+}
+.what_is .container ul li .list .over {
+	display: none;
+	position: absolute;
+	left: 50%;
+	top: 0;
+	margin-left: -50%;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.what_is .container ul li:hover .list .over {
+	display: block;
+}
+.what_is .container ul li .list .over .bg {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: #1ebed1;
+	opacity: 0.7;
+}
+.what_is .container ul li .list .over .txt {
+	position: relative;
+	margin-top: 40px;
+	text-align: center;
+	font-size: 0.875rem;
+	font-weight: 400;
+	color: #fff;
+}
+.what_is .container ul li:first-child .list .over .txt {
+	margin-top: 32px;
+}
+.what_is .container ul li .txt {
+	position: relative;
+	line-height: 20px;
+	color: #666;
+}
+.what_is .container ul li .txt em {
+	display: block;
+	font-weight: 700;
+	color: #666;
+}
+
+/* tab menu */
+.tab_container {
+	position: relative;
+	background: #fff;
+	border-top: 4px solid #2a78a3;
+}
+.tab_container .container {
+	position: relative;
+	margin: 0 auto;
+	padding-bottom: 30px;
+	max-width: 990px;
+}
+.tab_container .container .navi {
+	position: relative;
+	top: -32px;
+	margin: 0 10px;
+	padding: 0 30px;
+	background: #2a78a3;
+	border-radius: 40px;
+}
+.tab_container .container .navi:after {
+	content: "";
+	display: table;
+	clear: both;
+	overflow: auto;
+}
+.tab_container .container .navi li {
+	position: relative;
+	float: left;
+	width: 33.3%;
+	text-align: center;
+	font-size: 1.063rem;
+	font-weight: 600;
+}
+.tab_container .container .navi li a {
+	display: block;
+	line-height: 60px;
+	color: #9bc2d8;
+}
+.tab_container .container .navi li a:hover {
+	text-decoration: none;
+}
+.tab_container .container .navi li.active a, 
+.tab_container .container .navi li.active a:hover {
+	color: #fff;
+}
+.tab_container .container .content .tab_content {
+	display: none;
+	position: relative;
+	padding: 0 20px;
+	text-align: center;
+}
+.tab_container .container .content .tab_content.on {
+	display: block;
+}
+.tab_container .container .content .tab_content .portfolio {
+	position: relative;
+	margin: 0 10px;
+}
+.tab_container .container .content .tab_content .portfolio:after {
+	content: "";
+	display: table;
+	clear: both;
+	overflow: auto;
+}
+.tab_container .container .content .tab_content .portfolio li {
+	position: relative;
+	float: left;
+	margin-bottom: 30px;
+	text-align: center;
+	width: 25%;
+}
+.tab_container .container .content .tab_content .portfolio li .image {
+	position: relative;
+	margin-bottom: 10px;
+}
+.tab_container .container .content .tab_content .portfolio li .image img {
+	height: 120px;
+}
+.tab_container .container .content .tab_content .portfolio li .txt {
+	position: relative;
+	line-height: 18px;
+	font-size: 0.750rem;
+	color: #999;
+}
+.tab_container .container .content .tab_content .portfolio li .txt b {
+	display: block;
+	font-weight: 600;
+	color: #333;
+}
+.tab_container .container .content .tab_content .portfolio li .txt a {
+	display: block;
+	margin-bottom: 5px;
+	color: #2a679b;
+}

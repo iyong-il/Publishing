@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+<title>basic :: CSS3 2D Transforms</title>
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic">
+<style>
+body {
+	margin: 20px;
+	padding: 20px;
+	line-height: 1;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1em;
+	background: #555;
+	color: #000;
+}
+.title {
+	margin: 0;
+	padding: 0;
+	font-size: 1.5em;
+	font-weight: 300;
+}
+.container {
+	margin-top: 35px;
+}
+.main {
+	display: -webkit-flex;
+	display: flex;
+	width: 300px;
+	height: 300px;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-flex-direction: column-reverse;
+	flex-direction: column-reverse;
+	/*
+	row : 기본 값입니다. 가변적인 아이템은 가로로 배치됩니다.
+	row-reverse : 가변적인 아이템은 row 속성 값과 마찬가지로 가로로 배치됩니다. 하지만 순서는 반대로 배치됩니다.
+	column : 가변적인 아이템은 수직으로 컬럼 형식으로 수직으로 배치됩니다.
+	column-reverse : 가변적인 아이템은 column 속성 값과 마찬가지로 세로로 배치됩니다. 하지만 순서는 반대로 배치됩니다.
+	initial : 가변적인 아이템은 기본 값으로 배치됩니다.
+	inherit : 가변적인 아이템은 상위 컨테이너의 속성 값에 영향을 받습니다.
+	*/
+}
+.main div {
+	padding: 10px;
+	width: 50px;
+	height: 50px;
+	font-size: 0.875em;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+</style>
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
+
+<body>
+<h1 class="title">basic :: justify-content property</h1>
+<div class="container">
+	<div class="main">
+		<div style="background-color:coral;">1</div>
+		<div style="background-color:lightblue;">2</div>
+		<div style="background-color:khaki;">3</div>
+		<div style="background-color:pink;">4</div>
+	</div>
+</div>
+</body>
+</html>

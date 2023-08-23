@@ -1,0 +1,431 @@
+/*
+ * Template Author : pixelhint.com
+ * Author Email : contact@pixelhint.com
+ * Template Name : Magnetic
+*/
+
+/* fonts */
+@font-face {
+	font-family: "lato_regular";
+	src: url("../fonts/lato-regular.eot");
+	src: url("../fonts/lato-regular.eot?#iefix") format("embedded-opentype"),
+	url("../fonts/lato-regular.woff") format("woff"),
+	url("../fonts/lato-regular.ttf") format("truetype"),
+	url("../fonts/lato-regular.svg#LatoRegular") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: "lato_bold";
+	src: url("../fonts/lato-bold.eot");
+	src: url("../fonts/lato-bold.eot?#iefix") format("embedded-opentype"),
+	url("../fonts/lato-bold.woff") format("woff"),
+	url("../fonts/lato-bold.ttf") format("truetype"),
+	url("../fonts/lato-bold.svg#LatoBold") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: "avantgardelt-extralight";
+	src: url("../fonts/avantgardelt-extralight.eot");
+	src: url("../fonts/avantgardelt-extralight.eot?#iefix") format("embedded-opentype"),
+	url("../fonts/avantgardelt-extralight.woff") format("woff"),
+	url("../fonts/avantgardelt-extralight.ttf") format("truetype"),
+	url("../fonts/avantgardelt-extralight.svg#avantgardelt-extralight") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* general CSS */
+body {
+	background: #fff;
+}
+.wrapper {
+	margin: 0 auto;
+	width: 92%;
+}
+button {
+	display: block;
+	float: left;
+	margin-right: 3px;
+	margin-bottom: 6px;
+	padding: 0 10px;
+	min-width: 40px;
+	height: 24px;
+	line-height: 24px;
+	text-align: center;
+	font-family: "lato_regular", sans-serif;
+	font-size: 11px;
+	background: #ccc;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+}
+button {
+	-webkit-transition: all 0.4s linear;
+	transition: all 0.4s linear;
+}
+button:last-child {
+	margin-right: 0;
+}
+button:hover, button:active {
+	background: #ababab;
+}
+button.active {
+	background: #00d2ff;
+}
+h1, h2, h3, h4, h5 ,h6 {
+	font-family: "lato_bold", sans-serif;
+	letter-spacing: 1px;
+	color: #4b4848;
+}
+h1 {
+	margin: 0.67em 0;
+	font-size: 2em;
+}
+h2 {
+	margin: 0.75em 0;
+	font-size: 1.5em;
+}
+h3 {
+	margin: 0.83em 0;
+	font-size: 1.17em;
+}
+h5 {
+	margin: 1.5em 0;
+	font-size: 0.83em;
+}
+h6 {
+	margin: 1.67em 0;
+	font-size: 0.75em;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-weight: bolder;
+}
+.clearfix:before,
+.clearfix:after {
+	content: "";
+	display: block;
+}
+.clearfix:after {
+	clear: both;
+}
+header ul.social li a,
+.main .work a .caption,
+header nav ul li a {
+	-webkit-transition: all 0.1s linear;
+	transition: all 0.1s linear;
+}
+
+/* header */
+header .logo a {
+	display: block;
+	width: 200px;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-family: "lato_regular", sans-serif;
+	font-size: 16px;
+	color: #999;
+}
+header #menu_icon,
+header #menu_icon.close_menu {
+	float: right;
+	margin-right: 40px;
+	width: 40px;
+	height: 40px;
+	background: url(../images/menu_icons.png) no-repeat;
+	cursor: pointer;
+}
+header #menu_icon.close_menu {
+	margin-right: 0;
+}
+header #menu_icon {
+	background-position: 0 0;
+}
+header #menu_icon.close_menu {
+	background-position: -41px 0;
+}
+/* tooltip */
+.tooltip {
+	display: block;
+	position: absolute;
+	z-index: 999;
+	padding: 7px 10px;
+	text-align: center;
+	letter-spacing: 5px;
+	white-space: nowrap;
+	font-family: "lato_regular", sans-serif;
+	font-size: 12px;
+	background: #454545;
+	color: #fff;
+	opacity: 0;
+}
+/*
+.tooltip:after {
+	content: "";
+	display: block;
+	position: absolute;
+	left: 50%;
+	bottom: -3px;
+	margin-left: -3px;
+	width: 0;
+	height: 0;
+	text-align: center;
+	border-style: solid;
+	border-width: 3px 3px 0 3px;
+	border-color: #454545 transparent transparent transparent;
+}
+*/
+
+@media (min-width: 1000px) {
+	header {
+		display: block;
+		position: fixed;
+		z-index: 9999;
+		left: 0;
+		top: 0;
+		float: left;
+		padding: 0 0 0 50px;
+		width: 250px;
+		height: 100%;
+		min-height: 650px;
+		overflow: hidden;
+		background: #fff;
+	}
+	header .logo {
+		margin-top: 100px;
+	}
+	header nav ul {
+		display: block;
+		margin-top: 100px;
+		list-style: none;
+		overflow: hidden;
+	}
+	header nav ul li {
+		display: block;
+		margin-bottom: 30px;
+	}
+	header nav ul li a {
+		text-decoration: none;
+		letter-spacing: 1px;
+		font-family: "lato_regular", sans-serif;
+		font-size: 18px;
+		font-weight: 400;
+		color: #000;
+	}
+	header nav ul li a:hover,
+	header nav ul li a.selected {
+		color: #969595;
+	}
+	header .footer {
+		position: absolute;
+		bottom: 50px;
+	}
+	header .footer ul.social {
+		margin-bottom: 5px;
+		list-style: none;
+	}
+	header .footer ul.social li {
+		display: block;
+		position: relative;
+		float: left;
+		margin: 0 15px 15px 0;
+	}
+	header .footer ul.social li a {
+		display: block;
+		width: 30px;
+		height: 30px;
+		background: url(../images/sm1.png) no-repeat;
+		background-position: 0 0;
+	}
+	header .footer ul.social li a:hover {
+		background: url(../images/sm1_hover.png) no-repeat;
+	}
+	header .footer ul.social li a.fb,
+	header .footer ul.social li a.fb:hover {
+		background-position: 0 0;
+	}
+	header .footer ul.social li a.google,
+	header footer ul.social li a.google:hover {
+		background-position: -31px 0;
+	}
+	header .footer ul.social li a.behance,
+	header .footer ul.social li a.behance:hover {
+		background-position: -62px 0;
+	}
+	header .footer ul.social li a.twitter,
+	header .footer ul.social li a.twitter:hover {
+		background-position: -93px 0;
+	}
+	header .footer ul.social li a.dribble,
+	header .footer ul.social li a.dribble:hover {
+		background-position: -124px 0;
+	}
+	header .footer ul.social li a.rss,
+	header .footer ul.social li a.rss:hover {
+		background-position: -155px 0;
+	}
+	header .footer .rights p {
+		line-height: 18px;
+		letter-spacing: 1px;
+		font-family: "lato_regular", sans-serif;
+		font-size: 11px;
+		color: #454545;
+	}
+	header .footer .rights a {
+		text-decoration: none;
+		font-family: "lato_bold", sans-serif;
+	}
+	header #menu_icon,
+	header #menu_icon.close_menu {
+		display: none;
+	}
+}
+@media (max-width: 1000px) {
+	header {
+		display: block;
+		position: relative;
+		padding: 0;
+		width: 100%;
+		min-height: 100px;
+	}
+	header .logo {
+		display: inline-block;
+		margin: 40px 0 0 30px;
+	}
+	header .footer {
+		display: none;
+	}
+	header #menu_icon,
+	header #menu_icon.close_menu {
+		position: absolute;
+		right: 30px;
+		top: 30px;
+		margin: 0;
+	}
+	header #menu_icon,
+	header #menu_icon.close_menu,
+	header nav ul.show_menu {
+		display: block;
+	}
+	header nav ul {
+		display: none;
+		position: relative;
+		margin-top: 35px;
+		list-style: none;
+	}
+	header nav ul li {
+		margin-bottom: 0;
+	}
+	header nav ul li a {
+		display: block;
+		padding: 30px 0;
+		width: 100%;
+		text-align: center;
+		text-decoration: none;
+		font-family: "lato_regluar", sans-serif;
+		font-size: 18px;
+		background: #fff;
+		color: #454545;
+		border-top: 1px solid #f5f5f5;
+	}
+	header nav ul li a:hover,
+	header nav ul li a:active {
+		background: #f5f5f5;
+	}
+}
+
+/* 이번 강좌에서 추가된 스타일입니다. */
+/* main */
+.main {
+	position: relative;
+	z-index: 55;
+	clear: both;
+	padding-left: 300px;
+	width: 100%;
+	height: 100%;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.main .top {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 350px;
+	background: url(../images/title_image.jpg) no-repeat;
+	background-position: 50% 50%;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+.main .top .content_header {
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	margin: 0 auto;
+	margin-left: -46%;
+}
+.main .top .content_header .work_nav {
+	display: block;
+	width: 100%;
+}
+.main .top .content_header .work_nav ul.btn {
+	float: right;
+	list-style: none;
+}
+.main .top .content_header .work_nav ul.btn li {
+	display: block;
+	position: relative;
+	float: left;
+	margin: 0 0 1px 1px;
+}
+.main .top .content_header .work_nav ul.btn li a {
+	display: block;
+	width: 40px;
+	height: 40px;
+	background: url(../images/p_navigation.png) no-repeat;
+	background-position: 0 0;
+}
+.main .top .content_header .work_nav ul.btn li a.previous {
+	background-position: 0 0;
+}
+.main .top .content_header .work_nav ul.btn li a.grid {
+	background-position: -41px 0;
+}
+.main .top .content_header .work_nav ul.btn li a.next {
+	background-position: -82px 0;
+}
+.main .top .content_header .title {
+	display: block;
+	margin: 0;
+	padding: 20px;
+	width: 100%;
+	overflow: hidden;
+	line-height: 30px;
+	font-family: "lato_regular", sans-serif;
+	font-size: 30px;
+	font-weight: 400;
+	background: rgba(255,255,255,.7);
+	color: #4b4848;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.main .content {
+	padding: 40px 30px;
+	line-height: 22px;
+	font-family: "lato_regular", sans-serif;
+	font-size: 15px;
+	background: #fff;
+	color: #4b4848;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+@media (max-width: 1000px) {
+	.main {
+		position: relative;
+		padding-left: 0;
+		width: 100%;
+	}
+}
